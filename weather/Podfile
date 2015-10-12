@@ -4,4 +4,5 @@ pod "AFNetworking", "~> 2.0"
 pod 'Mantle' 
 pod 'LBBlurredImage' 
 pod 'TSMessages' 
-pod 'ReactiveCocoa' 
+pod 'ReactiveCocoa'
+pod 'SDWebImage', '~>3.7'

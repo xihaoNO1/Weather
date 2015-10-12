@@ -9,11 +9,22 @@
 /* Begin PBXBuildFile section */
 		CD35691A326A126B5F569213 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D18B6C5246A55B45CB5059 /* libPods.a */; };
 		EA21EDC21BC90BC00082CB25 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA21EDC11BC90BC00082CB25 /* TabBarController.m */; settings = {ASSET_TAGS = (); }; };
+		EA796ECD1BCB897300B58ED7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA796ECC1BCB897300B58ED7 /* Foundation.framework */; };
+		EA796ECF1BCB897A00B58ED7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA796ECE1BCB897A00B58ED7 /* UIKit.framework */; };
+		EA796ED11BCB898200B58ED7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA796ED01BCB898200B58ED7 /* AssetsLibrary.framework */; };
 		EA7A7BE81BC9475700CB9917 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A7BE71BC9475700CB9917 /* MyViewController.m */; settings = {ASSET_TAGS = (); }; };
 		EA7A7BEE1BC9650A00CB9917 /* myView_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A7BED1BC9650A00CB9917 /* myView_bg.png */; settings = {ASSET_TAGS = (); }; };
 		EA7A7BF01BC969BD00CB9917 /* shijing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A7BEF1BC969BD00CB9917 /* shijing@2x.png */; settings = {ASSET_TAGS = (); }; };
 		EA7A7BF21BC96B0600CB9917 /* wo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A7BF11BC96B0600CB9917 /* wo@2x.png */; settings = {ASSET_TAGS = (); }; };
 		EA7A7BF41BC9722000CB9917 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7A7BF31BC9722000CB9917 /* CoreGraphics.framework */; };
+		EA7A7C541BCA842900CB9917 /* SwipableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A7C531BCA842800CB9917 /* SwipableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EA7A7C571BCA8EB800CB9917 /* HorizonalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A7C561BCA8EB800CB9917 /* HorizonalTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EA7A7C5A1BCA8F3600CB9917 /* TitleBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A7C591BCA8F3600CB9917 /* TitleBarView.m */; settings = {ASSET_TAGS = (); }; };
+		EA7A7C631BCB616200CB9917 /* SceneryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7A7C621BCB616200CB9917 /* SceneryViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EA7A7C681BCB692100CB9917 /* Snip20151012_3.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A7C651BCB692100CB9917 /* Snip20151012_3.png */; settings = {ASSET_TAGS = (); }; };
+		EA7A7C691BCB692100CB9917 /* Snip20151012_4.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A7C661BCB692100CB9917 /* Snip20151012_4.png */; settings = {ASSET_TAGS = (); }; };
+		EA7A7C6A1BCB692100CB9917 /* Snip20151012_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A7C671BCB692100CB9917 /* Snip20151012_2.png */; settings = {ASSET_TAGS = (); }; };
+		EA82DB711BCBA7890082102B /* 0008C646-167C-460E-8B2D-9B878719B920.png in Resources */ = {isa = PBXBuildFile; fileRef = EA82DB701BCBA7890082102B /* 0008C646-167C-460E-8B2D-9B878719B920.png */; settings = {ASSET_TAGS = (); }; };
 		EAB7E83A1BC81A1C0049F58D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB7E8391BC81A1C0049F58D /* main.m */; };
 		EAB7E83D1BC81A1D0049F58D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB7E83C1BC81A1D0049F58D /* AppDelegate.m */; };
 		EAB7E8431BC81A1D0049F58D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB7E8411BC81A1D0049F58D /* Main.storyboard */; };
@@ -80,12 +91,27 @@
 		C79328E3F1D775E3DAF54486 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EA21EDC01BC90BC00082CB25 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		EA21EDC11BC90BC00082CB25 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		EA796ECC1BCB897300B58ED7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA796ECE1BCB897A00B58ED7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA796ED01BCB898200B58ED7 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		EA7A7BE61BC9475700CB9917 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
 		EA7A7BE71BC9475700CB9917 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		EA7A7BED1BC9650A00CB9917 /* myView_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myView_bg.png; sourceTree = "<group>"; };
 		EA7A7BEF1BC969BD00CB9917 /* shijing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shijing@2x.png"; sourceTree = "<group>"; };
 		EA7A7BF11BC96B0600CB9917 /* wo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wo@2x.png"; sourceTree = "<group>"; };
 		EA7A7BF31BC9722000CB9917 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA7A7C521BCA842800CB9917 /* SwipableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipableViewController.h; sourceTree = "<group>"; };
+		EA7A7C531BCA842800CB9917 /* SwipableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipableViewController.m; sourceTree = "<group>"; };
+		EA7A7C551BCA8EB800CB9917 /* HorizonalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizonalTableViewController.h; sourceTree = "<group>"; };
+		EA7A7C561BCA8EB800CB9917 /* HorizonalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizonalTableViewController.m; sourceTree = "<group>"; };
+		EA7A7C581BCA8F3600CB9917 /* TitleBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleBarView.h; sourceTree = "<group>"; };
+		EA7A7C591BCA8F3600CB9917 /* TitleBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleBarView.m; sourceTree = "<group>"; };
+		EA7A7C611BCB616200CB9917 /* SceneryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneryViewController.h; sourceTree = "<group>"; };
+		EA7A7C621BCB616200CB9917 /* SceneryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneryViewController.m; sourceTree = "<group>"; };
+		EA7A7C651BCB692100CB9917 /* Snip20151012_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20151012_3.png; sourceTree = "<group>"; };
+		EA7A7C661BCB692100CB9917 /* Snip20151012_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20151012_4.png; sourceTree = "<group>"; };
+		EA7A7C671BCB692100CB9917 /* Snip20151012_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20151012_2.png; sourceTree = "<group>"; };
+		EA82DB701BCBA7890082102B /* 0008C646-167C-460E-8B2D-9B878719B920.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0008C646-167C-460E-8B2D-9B878719B920.png"; sourceTree = "<group>"; };
 		EAB7E8351BC81A1C0049F58D /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB7E8391BC81A1C0049F58D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EAB7E83B1BC81A1C0049F58D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -147,6 +173,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA796ED11BCB898200B58ED7 /* AssetsLibrary.framework in Frameworks */,
+				EA796ECF1BCB897A00B58ED7 /* UIKit.framework in Frameworks */,
+				EA796ECD1BCB897300B58ED7 /* Foundation.framework in Frameworks */,
 				EA7A7BF41BC9722000CB9917 /* CoreGraphics.framework in Frameworks */,
 				CD35691A326A126B5F569213 /* libPods.a in Frameworks */,
 			);
@@ -181,6 +210,9 @@
 		9AE6D9C05E791A3981BCA980 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA796ED01BCB898200B58ED7 /* AssetsLibrary.framework */,
+				EA796ECE1BCB897A00B58ED7 /* UIKit.framework */,
+				EA796ECC1BCB897300B58ED7 /* Foundation.framework */,
 				EA7A7BF31BC9722000CB9917 /* CoreGraphics.framework */,
 				79D18B6C5246A55B45CB5059 /* libPods.a */,
 			);
@@ -194,6 +226,36 @@
 				EA21EDC11BC90BC00082CB25 /* TabBarController.m */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		EA7A7BF51BCA635500CB9917 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		EA7A7C511BCA83D600CB9917 /* SwipableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA7A7C521BCA842800CB9917 /* SwipableViewController.h */,
+				EA7A7C531BCA842800CB9917 /* SwipableViewController.m */,
+				EA7A7C551BCA8EB800CB9917 /* HorizonalTableViewController.h */,
+				EA7A7C561BCA8EB800CB9917 /* HorizonalTableViewController.m */,
+				EA7A7C581BCA8F3600CB9917 /* TitleBarView.h */,
+				EA7A7C591BCA8F3600CB9917 /* TitleBarView.m */,
+			);
+			name = SwipableViewController;
+			sourceTree = "<group>";
+		};
+		EA7A7C641BCB68FB00CB9917 /* scrollPic */ = {
+			isa = PBXGroup;
+			children = (
+				EA7A7C651BCB692100CB9917 /* Snip20151012_3.png */,
+				EA7A7C661BCB692100CB9917 /* Snip20151012_4.png */,
+				EA7A7C671BCB692100CB9917 /* Snip20151012_2.png */,
+			);
+			name = scrollPic;
 			sourceTree = "<group>";
 		};
 		EAB7E82C1BC81A1C0049F58D = {
@@ -221,15 +283,18 @@
 		EAB7E8371BC81A1C0049F58D /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				EA82DB701BCBA7890082102B /* 0008C646-167C-460E-8B2D-9B878719B920.png */,
 				EAB7E83B1BC81A1C0049F58D /* AppDelegate.h */,
 				EAB7E83C1BC81A1D0049F58D /* AppDelegate.m */,
 				EAB7E8411BC81A1D0049F58D /* Main.storyboard */,
+				EA7A7C511BCA83D600CB9917 /* SwipableViewController */,
 				EA21EDBF1BC90B860082CB25 /* Main */,
 				EAB7E86D1BC8E0450049F58D /* BaseVC */,
 				EAB7E8711BC8E0D10049F58D /* weather */,
 				EAB7E8751BC8E1510049F58D /* Scenery */,
 				EAB7E8791BC8E1DD0049F58D /* My */,
 				EACD44F11BC92F290021B72E /* Models */,
+				EA7A7BF51BCA635500CB9917 /* Utils */,
 				EAB7E8441BC81A1D0049F58D /* Assets.xcassets */,
 				EAB7E8831BC8F3C00049F58D /* SourceFile */,
 				EAB7E8381BC81A1C0049F58D /* Supporting Files */,
@@ -292,6 +357,8 @@
 			children = (
 				EAB7E8761BC8E1D70049F58D /* SceneryNavigationController.h */,
 				EAB7E8771BC8E1D70049F58D /* SceneryNavigationController.m */,
+				EA7A7C611BCB616200CB9917 /* SceneryViewController.h */,
+				EA7A7C621BCB616200CB9917 /* SceneryViewController.m */,
 			);
 			name = Scenery;
 			sourceTree = "<group>";
@@ -310,6 +377,7 @@
 		EAB7E8831BC8F3C00049F58D /* SourceFile */ = {
 			isa = PBXGroup;
 			children = (
+				EA7A7C641BCB68FB00CB9917 /* scrollPic */,
 				EAC7A5041BC8FB5500936F5C /* Weather Icons */,
 				EA7A7BEF1BC969BD00CB9917 /* shijing@2x.png */,
 				EA7A7BED1BC9650A00CB9917 /* myView_bg.png */,
@@ -470,6 +538,7 @@
 			files = (
 				EAC7A52F1BC8FB5500936F5C /* weather-shower.png in Resources */,
 				EA7A7BF21BC96B0600CB9917 /* wo@2x.png in Resources */,
+				EA82DB711BCBA7890082102B /* 0008C646-167C-460E-8B2D-9B878719B920.png in Resources */,
 				EAB7E8861BC8F3EA0049F58D /* navi_bg.png in Resources */,
 				EAC7A52A1BC8FB5500936F5C /* weather-rain-night@2x.png in Resources */,
 				EAC7A52C1BC8FB5500936F5C /* weather-rain@2x.png in Resources */,
@@ -478,7 +547,9 @@
 				EAB7E8481BC81A1D0049F58D /* LaunchScreen.storyboard in Resources */,
 				EAC7A5331BC8FB5500936F5C /* weather-tstorm.png in Resources */,
 				EAC7A52B1BC8FB5500936F5C /* weather-rain.png in Resources */,
+				EA7A7C691BCB692100CB9917 /* Snip20151012_4.png in Resources */,
 				EA7A7BEE1BC9650A00CB9917 /* myView_bg.png in Resources */,
+				EA7A7C681BCB692100CB9917 /* Snip20151012_3.png in Resources */,
 				EAC7A5021BC8FB4700936F5C /* bg.png in Resources */,
 				EAC7A5241BC8FB5500936F5C /* weather-few@2x.png in Resources */,
 				EAC7A5231BC8FB5500936F5C /* weather-few.png in Resources */,
@@ -502,6 +573,7 @@
 				EAB7E8431BC81A1D0049F58D /* Main.storyboard in Resources */,
 				EAC7A5281BC8FB5500936F5C /* weather-moon@2x.png in Resources */,
 				EAC7A5221BC8FB5500936F5C /* weather-few-night@2x.png in Resources */,
+				EA7A7C6A1BCB692100CB9917 /* Snip20151012_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,11 +633,15 @@
 			files = (
 				EAB7E8781BC8E1D70049F58D /* SceneryNavigationController.m in Sources */,
 				EAB7E8821BC8E62F0049F58D /* WeatherViewController.m in Sources */,
+				EA7A7C571BCA8EB800CB9917 /* HorizonalTableViewController.m in Sources */,
 				EAB7E8741BC8E1450049F58D /* WeatherNavigationController.m in Sources */,
 				EA21EDC21BC90BC00082CB25 /* TabBarController.m in Sources */,
+				EA7A7C631BCB616200CB9917 /* SceneryViewController.m in Sources */,
 				EA7A7BE81BC9475700CB9917 /* MyViewController.m in Sources */,
 				EAB7E8701BC8E0960049F58D /* BaseNavigationController.m in Sources */,
+				EA7A7C541BCA842900CB9917 /* SwipableViewController.m in Sources */,
 				EAB7E87C1BC8E2030049F58D /* MyNavigationController.m in Sources */,
+				EA7A7C5A1BCA8F3600CB9917 /* TitleBarView.m in Sources */,
 				EAB7E83D1BC81A1D0049F58D /* AppDelegate.m in Sources */,
 				EAB7E87F1BC8E60E0049F58D /* BaseViewController.m in Sources */,
 				EAB7E83A1BC81A1C0049F58D /* main.m in Sources */,

@@ -7,12 +7,16 @@
 //
 
 #import "TabBarController.h"
+#import "SwipableViewController.h"
+
 
 @interface TabBarController ()
 
 @end
 
 @implementation TabBarController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,8 +47,7 @@
     [item3 setTitle:@"我"];
     [item3 setImage:[UIImage imageNamed:@"wo@2x.png"]];
     [item3 setSelectedImage:[UIImage imageNamed:@"wo@2x.png"]];
-
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
