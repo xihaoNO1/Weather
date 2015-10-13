@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyViewController : UITableViewController
+@interface MyViewController : UITableViewController <UIScrollViewDelegate>
 
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;

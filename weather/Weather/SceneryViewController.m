@@ -92,7 +92,14 @@
                    UIImage *image = [UIImage imageWithCGImage:imageRef];
                    //将相片加入到数组中
                    [_imageArray addObject:image];
-                   [self.collectionView reloadData];
+                  
+                   if (_imageArray.count <=20) {
+                        [self.collectionView reloadData];
+                   }
+                   else
+                   {
+                       return ;
+                   }
                }
            }];
        }
@@ -135,8 +142,10 @@
     UIImageView *iv =(UIImageView *) [cell viewWithTag:1];
     iv.image = _imageArray[indexPath.row];
     iv.frame = cell.bounds;
-    [cell addSubview:iv];
     iv.contentMode = UIViewContentModeScaleAspectFill;
+//    UILabel *lab = (UILabel *)[cell viewWithTag:2];
+//    lab.backgroundColor = [UIColor redColor];
+//    lab.text = [NSString stringWithFormat:@"美景%d",indexPath.row + 1];
     return cell;
 }
 

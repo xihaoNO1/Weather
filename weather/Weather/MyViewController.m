@@ -7,15 +7,14 @@
 //
 
 #import "MyViewController.h"
+#import "UIScrollView+ScalableCover.h"
 
 @interface MyViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *portraitIV;
 
 @end
 
 @implementation MyViewController
-
-static CGFloat kImageOriginHight = 200;
-static CGFloat kTempHeight = 80.0f;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -35,37 +34,32 @@ static CGFloat kTempHeight = 80.0f;
     [self.navigationController.navigationBar setBackgroundImage:image
                                                   forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:image];
-    
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, 320, 568)];
     self.tableView.delegate = self;
     self.tableView.backgroundColor = [UIColor whiteColor];
-    
-    self.tableView.contentInset = UIEdgeInsetsMake(150, 0, 0, 0);
-    
-    
-    self.imageView.frame = CGRectMake(0, -kImageOriginHight, self.tableView.frame.size.width, kImageOriginHight + kTempHeight);
-    self.imageView.image = [UIImage imageNamed:@"myView_bg.png"];
-    [self.tableView  addSubview:self.imageView];
+
+    [self setCoverImage];
+    self.portraitIV.image = [UIImage imageNamed:@"Snip20151013_1.png"];
+    self.portraitIV.layer.cornerRadius = self.portraitIV.frame.size.width / 2;
+    self.portraitIV.layer.masksToBounds = YES;
+    self.portraitIV.alpha = 0.8;
+
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle
+
+- (void)setCoverImage
 {
-    return UIStatusBarStyleLightContent;
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    CGFloat yOffset  = scrollView.contentOffset.y;
-    NSLog(@"yOffset===%f",yOffset);
-    CGFloat xOffset = (yOffset + kImageOriginHight)/2;
-    if (yOffset < -kImageOriginHight) {
-        CGRect f = self.imageView.frame;
-        f.origin.y = yOffset - kTempHeight;
-        f.size.height =  -yOffset + kTempHeight;
-        f.origin.x = 0.0;
-        f.size.width = 320 + fabsf(xOffset)*2;
-        self.imageView.frame = f;
+    NSString *imageName = @"myView_bg.png";
+    
+    if (!self.tableView.scalableCover) {
+        [self.tableView addScalableCoverWithImage:[UIImage imageNamed:imageName]];
+    } else {
+        self.tableView.scalableCover.image = [UIImage imageNamed:imageName];
     }
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGPoint offset = scrollView.contentOffset;
+}
 
 @end
