@@ -2,14 +2,12 @@
 //  WeatherViewController.h
 //  Weather
 //
-//  Created by xixixi on 15/10/10.
+//  Created by xixixi on 15/10/14.
 //  Copyright © 2015年 xihao. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseTableViewController.h"
 
-
-@interface WeatherViewController : BaseViewController
-<UITableViewDataSource , UITableViewDelegate,UIScrollViewDelegate>
+@interface WeatherViewController : BaseTableViewController
 
 @end

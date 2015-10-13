@@ -38,10 +38,12 @@
     self.tableView.backgroundColor = [UIColor whiteColor];
 
     [self setCoverImage];
+    self.portraitIV.bounds = CGRectMake(0, 0, 100, 100);
     self.portraitIV.image = [UIImage imageNamed:@"Snip20151013_1.png"];
     self.portraitIV.layer.cornerRadius = self.portraitIV.frame.size.width / 2;
     self.portraitIV.layer.masksToBounds = YES;
     self.portraitIV.alpha = 0.8;
+
 
 }
 
@@ -60,6 +62,17 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGPoint offset = scrollView.contentOffset;
+    NSLog(@"%f",offset.y);
+    if (offset.y < -64.0) {
+        CGFloat alpha = 0.8 + offset.y / 100 + 0.64;
+        [self.portraitIV setAlpha:alpha];
+    }
+    else
+    {
+        [self.portraitIV setBounds:CGRectMake(0, 0, 100 - 4 * offset.y / 6.4  - 40, 100 - 4 * offset.y / 6.4  - 40)];
+        self.portraitIV.layer.cornerRadius = self.portraitIV.frame.size.width / 2;
+    }
+    
 }
 
 @end

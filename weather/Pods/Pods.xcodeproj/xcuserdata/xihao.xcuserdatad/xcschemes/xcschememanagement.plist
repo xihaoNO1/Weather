@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RESideMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ReactiveCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,27 +52,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>035E675986AD5CE105A7829AF0DBA897</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0CAC65E7593A0F5B20E186F383E4ACB0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>18A4BA8BFD66F76A5A3AE5290D46B994</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>25A4FC73B3573DCD7960D8D018220BB8</key>
+		<key>2965E38DCEBC6E89D5362BA6561D3FBD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>289E822407D878E3A8EE7E1B6E8DCE1B</key>
+		<key>306AC00CED65417541477DEAC6D2DA49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +72,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>67E304D8FD8F0BBD75466B34164B9C43</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6951DA9871DA259A9AAA6EFC68AEF8EB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2271D3BB4C85A4DA4E7BC5DB70F71D0</key>
+		<key>CCCF0473C9BECCEF6F44CC8CC95C93C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3973914348B2A0B4C18D8BEAAD160F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FBA881EA21165D200A39A023E8904E6A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

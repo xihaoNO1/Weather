@@ -117,9 +117,9 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     //获取当前视图的宽度
-    CGFloat pageWith = scrollView.frame.size.width;
+    CGFloat pageWidth = scrollView.frame.size.width;
     //根据scrolView的左右滑动,对pageCotrol的当前指示器进行切换(设置currentPage)
-    int page = floor((scrollView.contentOffset.x - pageWith/2)/pageWith)+1;
+    int page = floor((scrollView.contentOffset.x - pageWidth/2)/pageWidth)+1;
     //切换改变页码，小圆点
     self.pageControl.currentPage = page;
 }
