@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) AFHTTPRequestOperationManager *manager;
+@property (strong, nonatomic) NSDictionary *information;
 
 
 @end

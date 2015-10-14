@@ -8,6 +8,6 @@
 
 #import "BaseTableViewController.h"
 
-@interface WeatherViewController : BaseTableViewController
+@interface WeatherViewController : BaseTableViewController <UICollectionViewDelegate, UICollectionViewDelegate,UIScrollViewDelegate>
 
 @end
