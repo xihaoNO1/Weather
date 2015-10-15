@@ -11,6 +11,15 @@
 		EA18964B1BCC1BEF0048A983 /* UIScrollView+ScalableCover.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1896331BCC1BEF0048A983 /* UIScrollView+ScalableCover.m */; settings = {ASSET_TAGS = (); }; };
 		EA1896551BCC2AA50048A983 /* Snip20151013_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1896541BCC2AA50048A983 /* Snip20151013_1.png */; settings = {ASSET_TAGS = (); }; };
 		EA21EDC21BC90BC00082CB25 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA21EDC11BC90BC00082CB25 /* TabBarController.m */; settings = {ASSET_TAGS = (); }; };
+		EA2EC6CF1BCF9A89003881EC /* weatherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2EC6CD1BCF9A89003881EC /* weatherCell.m */; settings = {ASSET_TAGS = (); }; };
+		EA2EC6D01BCF9A89003881EC /* weatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2EC6CE1BCF9A89003881EC /* weatherCell.xib */; settings = {ASSET_TAGS = (); }; };
+		EA2EC6E61BCFC505003881EC /* zhishuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2EC6E51BCFC505003881EC /* zhishuCell.m */; settings = {ASSET_TAGS = (); }; };
+		EA2EC6EE1BCFD59B003881EC /* chuanyi.png in Resources */ = {isa = PBXBuildFile; fileRef = EA2EC6E81BCFD59B003881EC /* chuanyi.png */; settings = {ASSET_TAGS = (); }; };
+		EA2EC6EF1BCFD59B003881EC /* ganmao.png in Resources */ = {isa = PBXBuildFile; fileRef = EA2EC6E91BCFD59B003881EC /* ganmao.png */; settings = {ASSET_TAGS = (); }; };
+		EA2EC6F01BCFD59B003881EC /* lvyou.png in Resources */ = {isa = PBXBuildFile; fileRef = EA2EC6EA1BCFD59B003881EC /* lvyou.png */; settings = {ASSET_TAGS = (); }; };
+		EA2EC6F11BCFD59B003881EC /* xiche.png in Resources */ = {isa = PBXBuildFile; fileRef = EA2EC6EB1BCFD59B003881EC /* xiche.png */; settings = {ASSET_TAGS = (); }; };
+		EA2EC6F21BCFD59B003881EC /* yundong.png in Resources */ = {isa = PBXBuildFile; fileRef = EA2EC6EC1BCFD59B003881EC /* yundong.png */; settings = {ASSET_TAGS = (); }; };
+		EA2EC6F31BCFD59B003881EC /* ziwaixian.png in Resources */ = {isa = PBXBuildFile; fileRef = EA2EC6ED1BCFD59B003881EC /* ziwaixian.png */; settings = {ASSET_TAGS = (); }; };
 		EA796ECD1BCB897300B58ED7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA796ECC1BCB897300B58ED7 /* Foundation.framework */; };
 		EA796ECF1BCB897A00B58ED7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA796ECE1BCB897A00B58ED7 /* UIKit.framework */; };
 		EA796ED11BCB898200B58ED7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA796ED01BCB898200B58ED7 /* AssetsLibrary.framework */; };
@@ -105,6 +114,17 @@
 		EA1896541BCC2AA50048A983 /* Snip20151013_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20151013_1.png; sourceTree = "<group>"; };
 		EA21EDC01BC90BC00082CB25 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		EA21EDC11BC90BC00082CB25 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		EA2EC6CC1BCF9A89003881EC /* weatherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = weatherCell.h; sourceTree = "<group>"; };
+		EA2EC6CD1BCF9A89003881EC /* weatherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = weatherCell.m; sourceTree = "<group>"; };
+		EA2EC6CE1BCF9A89003881EC /* weatherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = weatherCell.xib; sourceTree = "<group>"; };
+		EA2EC6E41BCFC505003881EC /* zhishuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zhishuCell.h; sourceTree = "<group>"; };
+		EA2EC6E51BCFC505003881EC /* zhishuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zhishuCell.m; sourceTree = "<group>"; };
+		EA2EC6E81BCFD59B003881EC /* chuanyi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chuanyi.png; sourceTree = "<group>"; };
+		EA2EC6E91BCFD59B003881EC /* ganmao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ganmao.png; sourceTree = "<group>"; };
+		EA2EC6EA1BCFD59B003881EC /* lvyou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lvyou.png; sourceTree = "<group>"; };
+		EA2EC6EB1BCFD59B003881EC /* xiche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiche.png; sourceTree = "<group>"; };
+		EA2EC6EC1BCFD59B003881EC /* yundong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yundong.png; sourceTree = "<group>"; };
+		EA2EC6ED1BCFD59B003881EC /* ziwaixian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ziwaixian.png; sourceTree = "<group>"; };
 		EA796ECC1BCB897300B58ED7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA796ECE1BCB897A00B58ED7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA796ED01BCB898200B58ED7 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -272,6 +292,19 @@
 			name = Main;
 			sourceTree = "<group>";
 		};
+		EA2EC6E71BCFD59B003881EC /* zhishuIcon */ = {
+			isa = PBXGroup;
+			children = (
+				EA2EC6E81BCFD59B003881EC /* chuanyi.png */,
+				EA2EC6E91BCFD59B003881EC /* ganmao.png */,
+				EA2EC6EA1BCFD59B003881EC /* lvyou.png */,
+				EA2EC6EB1BCFD59B003881EC /* xiche.png */,
+				EA2EC6EC1BCFD59B003881EC /* yundong.png */,
+				EA2EC6ED1BCFD59B003881EC /* ziwaixian.png */,
+			);
+			path = zhishuIcon;
+			sourceTree = "<group>";
+		};
 		EA7A7BF51BCA635500CB9917 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +447,11 @@
 				EAB7E8731BC8E1450049F58D /* WeatherNavigationController.m */,
 				EA97C35B1BCD643C00B9362F /* WeatherViewController.h */,
 				EA97C35C1BCD643C00B9362F /* WeatherViewController.m */,
+				EA2EC6CC1BCF9A89003881EC /* weatherCell.h */,
+				EA2EC6CD1BCF9A89003881EC /* weatherCell.m */,
+				EA2EC6CE1BCF9A89003881EC /* weatherCell.xib */,
+				EA2EC6E41BCFC505003881EC /* zhishuCell.h */,
+				EA2EC6E51BCFC505003881EC /* zhishuCell.m */,
 			);
 			name = weather;
 			sourceTree = "<group>";
@@ -443,6 +481,7 @@
 		EAB7E8831BC8F3C00049F58D /* SourceFile */ = {
 			isa = PBXGroup;
 			children = (
+				EA2EC6E71BCFD59B003881EC /* zhishuIcon */,
 				EAE489D11BCEDE4100AFE65A /* cartoon_2.png */,
 				EAE489D21BCEDE4100AFE65A /* cartoon_1.png */,
 				EA1896541BCC2AA50048A983 /* Snip20151013_1.png */,
@@ -625,9 +664,11 @@
 				EAC7A5331BC8FB5500936F5C /* weather-tstorm.png in Resources */,
 				EAC7A52B1BC8FB5500936F5C /* weather-rain.png in Resources */,
 				EA7A7C691BCB692100CB9917 /* Snip20151012_4.png in Resources */,
+				EA2EC6F21BCFD59B003881EC /* yundong.png in Resources */,
 				EA7A7BEE1BC9650A00CB9917 /* myView_bg.png in Resources */,
 				EA1896551BCC2AA50048A983 /* Snip20151013_1.png in Resources */,
 				EA7A7C681BCB692100CB9917 /* Snip20151012_3.png in Resources */,
+				EA2EC6D01BCF9A89003881EC /* weatherCell.xib in Resources */,
 				EAC7A5241BC8FB5500936F5C /* weather-few@2x.png in Resources */,
 				EAC7A5231BC8FB5500936F5C /* weather-few.png in Resources */,
 				EAC7A5201BC8FB5500936F5C /* weather-clear@2x.png in Resources */,
@@ -639,18 +680,23 @@
 				EAC7A51E1BC8FB5500936F5C /* weather-broken@2x.png in Resources */,
 				EAC7A51F1BC8FB5500936F5C /* weather-clear.png in Resources */,
 				EAC7A5321BC8FB5500936F5C /* weather-snow@2x.png in Resources */,
+				EA2EC6F31BCFD59B003881EC /* ziwaixian.png in Resources */,
 				EAB7E8451BC81A1D0049F58D /* Assets.xcassets in Resources */,
 				EAB7E8871BC8F3EA0049F58D /* bar_bg.png in Resources */,
 				EA97C3651BCD876600B9362F /* 4.png in Resources */,
+				EA2EC6F11BCFD59B003881EC /* xiche.png in Resources */,
 				EAE489D31BCEDE4100AFE65A /* cartoon_2.png in Resources */,
 				EAC7A5211BC8FB5500936F5C /* weather-few-night.png in Resources */,
 				EA97C3671BCD956700B9362F /* bg.png in Resources */,
 				EA97C3641BCD876600B9362F /* 3.png in Resources */,
 				EA7A7BF01BC969BD00CB9917 /* shijing@2x.png in Resources */,
+				EA2EC6EE1BCFD59B003881EC /* chuanyi.png in Resources */,
 				EAC7A5251BC8FB5500936F5C /* weather-mist.png in Resources */,
+				EA2EC6EF1BCFD59B003881EC /* ganmao.png in Resources */,
 				EAC7A5261BC8FB5500936F5C /* weather-mist@2x.png in Resources */,
 				EAE489D41BCEDE4200AFE65A /* cartoon_1.png in Resources */,
 				EAC7A52D1BC8FB5500936F5C /* weather-scattered.png in Resources */,
+				EA2EC6F01BCFD59B003881EC /* lvyou.png in Resources */,
 				EAB7E8431BC81A1D0049F58D /* Main.storyboard in Resources */,
 				EAC7A5281BC8FB5500936F5C /* weather-moon@2x.png in Resources */,
 				EAC7A5221BC8FB5500936F5C /* weather-few-night@2x.png in Resources */,
@@ -720,9 +766,11 @@
 				EA21EDC21BC90BC00082CB25 /* TabBarController.m in Sources */,
 				EA7A7C631BCB616200CB9917 /* SceneryViewController.m in Sources */,
 				EA7A7BE81BC9475700CB9917 /* MyViewController.m in Sources */,
+				EA2EC6CF1BCF9A89003881EC /* weatherCell.m in Sources */,
 				EAB7E8701BC8E0960049F58D /* BaseNavigationController.m in Sources */,
 				EA97C35A1BCD61F800B9362F /* BaseTableViewController.m in Sources */,
 				EA7A7C541BCA842900CB9917 /* SwipableViewController.m in Sources */,
+				EA2EC6E61BCFC505003881EC /* zhishuCell.m in Sources */,
 				EAB7E87C1BC8E2030049F58D /* MyNavigationController.m in Sources */,
 				EA7A7C5A1BCA8F3600CB9917 /* TitleBarView.m in Sources */,
 				EA97C35D1BCD643C00B9362F /* WeatherViewController.m in Sources */,

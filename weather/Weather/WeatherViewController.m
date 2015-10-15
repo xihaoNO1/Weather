@@ -10,6 +10,8 @@
 #import "AppDelegate.h"
 #import "WeatherViewController.h"
 #import "Config.h"
+#import "weatherCell.h"
+#import "zhishuCell.h"
 
 
 //宏定义宽和高
@@ -60,8 +62,9 @@
     self.headSubview_2.layer.borderColor = [UIColor whiteColor].CGColor;
     self.headSubview_2.layer.borderWidth = 0.25;
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-
+    [self.tableView reloadData];
 }
 
 
@@ -121,8 +124,12 @@
     
     //设置PM2.5按钮
     NSString *pm25Str = [[_app.information objectForKey:@"results"][0] objectForKey:@"pm25"];
-    NSString *pm25Str_2 = [@"PM2.5指数 " stringByAppendingString:pm25Str];
+    NSString *pm25Str_2 = [@"PM2.5 " stringByAppendingString:pm25Str];
     [self.pm25Bn setTitle:pm25Str_2 forState:UIControlStateNormal];
+    self.pm25Bn.layer.cornerRadius = 10;
+    self.pm25Bn.layer.masksToBounds = YES;
+    self.pm25Bn.backgroundColor = [UIColor orangeColor];
+    self.pm25Bn.alpha = 0.8;
 }
 
 //刷新天气信息
@@ -180,6 +187,91 @@
     }
 }
 
+#pragma mark - tabelDelegate and dataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 1;
+    }
+    else{
+        return 1;
+    }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 22)];
+        view1.backgroundColor = [UIColor blackColor];
+        view1.alpha = 0.5;
+        UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 3, SCREEN_WIDTH, 22)];
+        label1.text = @" 预报";
+        label1.backgroundColor = [UIColor clearColor];
+        label1.textAlignment = NSTextAlignmentLeft;
+        label1.font = [UIFont systemFontOfSize:15];
+        label1.textColor = [UIColor whiteColor];
+        [view1 addSubview:label1];
+
+        
+        return view1;
+    }
+    else
+    {
+        UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 22)];
+        view2.backgroundColor = [UIColor blackColor];
+        view2.alpha = 0.5;
+        UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 3, SCREEN_WIDTH, 22)];
+        label2.text = @" 指数";
+        label2.backgroundColor = [UIColor clearColor];
+        label2.textAlignment = NSTextAlignmentLeft;
+        label2.font = [UIFont systemFontOfSize:15];
+        label2.textColor = [UIColor whiteColor];
+        [view2 addSubview:label2];
+
+
+        
+        return view2;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSUInteger section = indexPath.section;
+    if (section == 0) {
+        return SCREEN_HEIGHT / 3 *2;
+    }
+    else
+    {
+        return SCREEN_HEIGHT / 4 * 3;
+    }
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //获取当前分区号
+    NSUInteger sectionNO = indexPath.section;
+  
+    if (sectionNO == 0) {
+        UITableViewCell *cell = [UITableViewCell new];
+        NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"weatherCell" owner:self options:nil];
+        cell = nib[0];
+        cell.backgroundColor = [UIColor clearColor];
+        return cell;
+    }
+    else
+    {
+        UITableViewCell *cell = [UITableViewCell new];
+        zhishuCell *cellZhishu = [[zhishuCell alloc] init];
+        UITableViewCell *getCell = (UITableViewCell *)[cellZhishu getCell];
+        cell = getCell;
+        return cell;
+    }
+}
 
 
 @end
