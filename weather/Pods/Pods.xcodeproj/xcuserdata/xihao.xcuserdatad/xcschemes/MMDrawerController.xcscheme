@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A44010EE5CD3B4C654D1E910"
-               BuildableName = "libRESideMenu.a"
-               BlueprintName = "RESideMenu"
+               BlueprintIdentifier = "5000763005457F098932FBF6"
+               BuildableName = "libMMDrawerController.a"
+               BlueprintName = "MMDrawerController"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+//#import <MMDrawerController/MMDrawerVisualState.h>
 
 @interface AppDelegate ()
 
@@ -15,10 +16,10 @@
 @implementation AppDelegate
 
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.manager = [AFHTTPRequestOperationManager manager];
-    
+    self.manager = [AFHTTPRequestOperationManager manager];//    [self initDrawer];
     return YES;
 }
 

@@ -19,17 +19,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MMDrawerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RESideMenu.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -51,52 +51,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>18A4BA8BFD66F76A5A3AE5290D46B994</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>209B08A235250E7296DEE76555B94946</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2965E38DCEBC6E89D5362BA6561D3FBD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>306AC00CED65417541477DEAC6D2DA49</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5289D0E28EF37544BABD58BCB1859BB4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5352D432641F0656C90741034E32F31E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6951DA9871DA259A9AAA6EFC68AEF8EB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B33390760D00324E5768B902D8CC1073</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E47723B2BB52898F91FEEAAFD637AB0B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

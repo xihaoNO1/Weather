@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD35691A326A126B5F569213 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D18B6C5246A55B45CB5059 /* libPods.a */; };
+		EA12F0921BD02432001BCB60 /* RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA12F0911BD02432001BCB60 /* RootController.m */; settings = {ASSET_TAGS = (); }; };
 		EA18964B1BCC1BEF0048A983 /* UIScrollView+ScalableCover.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1896331BCC1BEF0048A983 /* UIScrollView+ScalableCover.m */; settings = {ASSET_TAGS = (); }; };
 		EA1896551BCC2AA50048A983 /* Snip20151013_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EA1896541BCC2AA50048A983 /* Snip20151013_1.png */; settings = {ASSET_TAGS = (); }; };
 		EA21EDC21BC90BC00082CB25 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA21EDC11BC90BC00082CB25 /* TabBarController.m */; settings = {ASSET_TAGS = (); }; };
@@ -36,7 +37,6 @@
 		EA7A7C691BCB692100CB9917 /* Snip20151012_4.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A7C661BCB692100CB9917 /* Snip20151012_4.png */; settings = {ASSET_TAGS = (); }; };
 		EA7A7C6A1BCB692100CB9917 /* Snip20151012_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A7C671BCB692100CB9917 /* Snip20151012_2.png */; settings = {ASSET_TAGS = (); }; };
 		EA82DB711BCBA7890082102B /* 0008C646-167C-460E-8B2D-9B878719B920.png in Resources */ = {isa = PBXBuildFile; fileRef = EA82DB701BCBA7890082102B /* 0008C646-167C-460E-8B2D-9B878719B920.png */; settings = {ASSET_TAGS = (); }; };
-		EA97C3531BCD3A6500B9362F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97C3521BCD3A6500B9362F /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
 		EA97C3571BCD3AB000B9362F /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97C3561BCD3AB000B9362F /* LeftViewController.m */; settings = {ASSET_TAGS = (); }; };
 		EA97C35A1BCD61F800B9362F /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97C3591BCD61F800B9362F /* BaseTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		EA97C35D1BCD643C00B9362F /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97C35C1BCD643C00B9362F /* WeatherViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -109,6 +109,8 @@
 		79D18B6C5246A55B45CB5059 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA21021246AEE5A07AEA285 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C79328E3F1D775E3DAF54486 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EA12F0901BD02432001BCB60 /* RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootController.h; sourceTree = "<group>"; };
+		EA12F0911BD02432001BCB60 /* RootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootController.m; sourceTree = "<group>"; };
 		EA1896321BCC1BEF0048A983 /* UIScrollView+ScalableCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ScalableCover.h"; sourceTree = "<group>"; };
 		EA1896331BCC1BEF0048A983 /* UIScrollView+ScalableCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ScalableCover.m"; sourceTree = "<group>"; };
 		EA1896541BCC2AA50048A983 /* Snip20151013_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20151013_1.png; sourceTree = "<group>"; };
@@ -146,8 +148,6 @@
 		EA7A7C661BCB692100CB9917 /* Snip20151012_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20151012_4.png; sourceTree = "<group>"; };
 		EA7A7C671BCB692100CB9917 /* Snip20151012_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20151012_2.png; sourceTree = "<group>"; };
 		EA82DB701BCBA7890082102B /* 0008C646-167C-460E-8B2D-9B878719B920.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "0008C646-167C-460E-8B2D-9B878719B920.png"; sourceTree = "<group>"; };
-		EA97C3511BCD3A6500B9362F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		EA97C3521BCD3A6500B9362F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		EA97C3551BCD3AB000B9362F /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		EA97C3561BCD3AB000B9362F /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		EA97C3581BCD61F800B9362F /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
@@ -339,8 +339,8 @@
 		EA97C3501BCD3A1D00B9362F /* RootViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EA97C3511BCD3A6500B9362F /* RootViewController.h */,
-				EA97C3521BCD3A6500B9362F /* RootViewController.m */,
+				EA12F0901BD02432001BCB60 /* RootController.h */,
+				EA12F0911BD02432001BCB60 /* RootController.m */,
 			);
 			name = RootViewController;
 			sourceTree = "<group>";
@@ -759,8 +759,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA18964B1BCC1BEF0048A983 /* UIScrollView+ScalableCover.m in Sources */,
+				EA12F0921BD02432001BCB60 /* RootController.m in Sources */,
 				EAB7E8781BC8E1D70049F58D /* SceneryNavigationController.m in Sources */,
-				EA97C3531BCD3A6500B9362F /* RootViewController.m in Sources */,
 				EA7A7C571BCA8EB800CB9917 /* HorizonalTableViewController.m in Sources */,
 				EAB7E8741BC8E1450049F58D /* WeatherNavigationController.m in Sources */,
 				EA21EDC21BC90BC00082CB25 /* TabBarController.m in Sources */,
