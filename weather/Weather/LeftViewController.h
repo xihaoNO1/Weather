@@ -10,4 +10,7 @@
 
 @interface LeftViewController : UITableViewController
 
+@property (nonatomic, strong)NSMutableArray *cityArray; // 属性用userDefault存储
+@property (nonatomic, strong)NSMutableArray *ariArray;  // 属性用userDefault存储 
+
 @end

@@ -26,11 +26,12 @@
     [super viewDidLoad];
     //处理系统collectionView的顶部留白
     self.automaticallyAdjustsScrollViewInsets = NO;
-    //隐藏导航栏
+    //设置导航栏的背景图片为透明
     UIImage *image = [UIImage imageNamed:@"navi_bg.png"];
     [self.navigationController.navigationBar setBackgroundImage:image
                                                   forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:image];
+    
     //设置scrollView及pageControl的位置
     self.scrollView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 80);
     self.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);

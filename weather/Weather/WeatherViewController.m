@@ -42,7 +42,6 @@
     _app = [UIApplication sharedApplication].delegate;
     //初始化天气信息
     [self freshWeatherData];
-    [NSThread sleepForTimeInterval:2];
     //设置导航栏的背景图片为透明
     UIImage *image = [UIImage imageNamed:@"navi_bg.png"];
     [self.navigationController.navigationBar setBackgroundImage:image
@@ -62,6 +61,7 @@
     self.headSubview_2.layer.borderColor = [UIColor whiteColor].CGColor;
     self.headSubview_2.layer.borderWidth = 0.25;
     
+    //将状态栏字体改为白色
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     [self.tableView reloadData];
@@ -71,8 +71,6 @@
 - (void)setHeadViewData
 {
     NSDictionary *information =  _app.information;
-    NSLog(@"===========%@",information);
-   
     //获取今天和明天的信息
     NSDictionary *currentInfo = [Config getCurrentInfo:information];
     NSDictionary *twoDayInfo = [Config getTwodayInfo:information];
@@ -147,6 +145,8 @@
                   //将返回信息保存到系统中
                   NSDictionary *info = (NSDictionary *)responseObject;
                   _app.information = info;
+                 
+                  //必须再次执行此代码 (为什么)
                   [self setHeadViewData];
                   
               } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
@@ -273,5 +273,28 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"weather interface will appear");
+}
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"weather interface did appear");
 
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSLog(@"weather interface  wil disappear");
+
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    NSLog(@"weather interface did disappear");
+
+}
 @end

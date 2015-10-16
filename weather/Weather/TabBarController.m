@@ -35,8 +35,8 @@
     //定义按钮1
     item1.tag = 1;
     [item1 setTitle:@"天气"];
-    [item1 setImage:[UIImage imageNamed:@"weather-clear@2x.png"]];
-    [item1 setSelectedImage:[UIImage imageNamed:@"weather-clear@2x.png"]];
+    [item1 setImage:[UIImage imageNamed:@"weather-clear2@2x.png"]];
+    [item1 setSelectedImage:[UIImage imageNamed:@"weather-clear2@2x.png"]];
     //创建按钮2
     item2.tag = 2;
     [item2 setTitle:@"时景"];

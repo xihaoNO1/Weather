@@ -1,29 +1,22 @@
 //
-//  RootController.m
+//  LeftNaviController.m
 //  Weather
 //
 //  Created by xixixi on 15/10/16.
 //  Copyright © 2015年 xihao. All rights reserved.
 //
 
-#import "RootController.h"
+#import "LeftNaviController.h"
 
-@interface RootController ()
+@interface LeftNaviController ()
 
 @end
 
-@implementation RootController
+@implementation LeftNaviController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarViewController"];
-    self.leftDrawerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LeftNavVC"];
-    
-    //注意使用方法和RESideMenu的区分------------------
-    [self setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll]; //必须
-    [self setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll]; // 必须
-    self.maximumLeftDrawerWidth = 250; 
 }
 
 - (void)didReceiveMemoryWarning {
