@@ -7,7 +7,6 @@
 //
 
 #import "TabBarController.h"
-#import "SwipableViewController.h"
 
 
 @interface TabBarController ()

@@ -37,7 +37,7 @@
     self.tableView.delegate = self;
     self.tableView.backgroundColor = [UIColor whiteColor];
 
-    [self setCoverImage];
+    [self setCoverImage];//使用类库添加可变图像
     self.portraitIV.bounds = CGRectMake(0, 0, 100, 100);
     self.portraitIV.image = [UIImage imageNamed:@"Snip20151013_1.png"];
     self.portraitIV.layer.cornerRadius = self.portraitIV.frame.size.width / 2;

@@ -27,7 +27,7 @@
         <scene sceneID="PMt-Tx-eA9">
             <objects>
                 <tableViewController id="qnj-xj-pxq" customClass="WeatherViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="llg-Pn-4Sv">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="llg-Pn-4Sv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -74,7 +74,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPF-ln-JQv">
-                                    <rect key="frame" x="8" y="201" width="49" height="37"/>
+                                    <rect key="frame" x="8" y="201" width="93" height="37"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <state key="normal" title="Button">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -330,14 +330,22 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="fSg-PF-JBf">
-                        <barButtonItem key="leftBarButtonItem" title="编辑" id="f2g-dE-w7L"/>
-                        <barButtonItem key="rightBarButtonItem" title="+" id="xOR-xY-7yd"/>
+                        <barButtonItem key="leftBarButtonItem" title="编辑" id="f2g-dE-w7L">
+                            <connections>
+                                <action selector="tapLeftButton:" destination="xcj-er-rrW" id="JPI-Lh-yZF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="xOR-xY-7yd">
+                            <connections>
+                                <action selector="tapRightButton:" destination="xcj-er-rrW" id="4k2-Ed-vbA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abl-d0-t8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-400" y="1212"/>
+            <point key="canvasLocation" x="-385" y="1139"/>
         </scene>
         <!--Left Navi Controller-->
         <scene sceneID="ces-p8-lf6">
@@ -354,7 +362,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEN-Ld-8fC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-855" y="1212"/>
+            <point key="canvasLocation" x="-855" y="1139"/>
         </scene>
         <!--Item-->
         <scene sceneID="UvR-eg-t30">

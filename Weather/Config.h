@@ -11,12 +11,21 @@
 #import "AppDelegate.h"
 
 @interface Config : NSObject
-@property (nonatomic, strong)NSDictionary *information;
+
 //定义类方法
+
 +(NSString *)getCurrentCity:(NSDictionary *)information;
 +(NSDictionary *)getCurrentInfo:(NSDictionary *)information;
 +(NSDictionary *)getTwodayInfo:(NSDictionary *)information;
 +(NSDictionary *)getThreedayInfo:(NSDictionary *)information;
 +(NSDictionary *)getFourdayInfo:(NSDictionary *)information;
 +(NSArray *)getCurrentLifeInfo:(NSDictionary *)information;
+
+//存储左侧视图的列表
++ (void)setCityList:(NSArray *)cityArray;
++ (void)setAriList:(NSArray *)ariArray;
+//获取左视图的列表
++ (NSArray *)getCityList;
++ (NSArray *)getAriList;
+
 @end

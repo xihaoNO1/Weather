@@ -30,16 +30,24 @@
 @property (strong, nonatomic) IBOutlet UIImageView *cartoonGirl;
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @property (nonatomic, assign) CGFloat screenHeight;
+
+//定义当前显示的城市
+@property (nonatomic, strong)NSString *currentCity;
 @end
 
 @implementation WeatherViewController
 {
     AppDelegate *_app;
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     _app = [UIApplication sharedApplication].delegate;
+    
+//    //获取系统存储的城市列表
+//    NSArray *cityArray = 
+    self.currentCity = @"淮北";
     //初始化天气信息
     [self freshWeatherData];
     //设置导航栏的背景图片为透明
@@ -135,7 +143,7 @@
 {
     
     //用字典封装参数
-    NSDictionary *pramas = @{@"location":@"淮北",
+    NSDictionary *pramas = @{@"location":self.currentCity,
                              @"output":@"json",
                              @"ak":@"PHStmR8HLSAi9GLhbdizAr2V",
                              @"mcode":@"xi.Weather"};
@@ -153,6 +161,8 @@
                   NSLog(@"连接服务器出错");
               }];
 }
+
+
 
 //- (void)viewDidLayoutSubviews
 //{
@@ -182,7 +192,7 @@
     CGPoint offset = scrollView.contentOffset;
     NSLog(@"%f",offset.y);
     if (offset.y > -64.0) {
-        CGFloat alpha = 1 - offset.y / 100 * 2 - 0.64 * 2;
+        CGFloat alpha = 1 - offset.y / 100  - 0.64 ;
         [self.cartoonGirl setAlpha:alpha];
     }
 }

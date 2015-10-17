@@ -9,6 +9,7 @@
 #import "LeftViewController.h"
 #import "Config.h"
 #import "AppDelegate.h"
+#import "SearchCityVC.h"
 
 @interface LeftViewController ()
 
@@ -20,21 +21,50 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //取得系统存储的用户添加的城市列表和空气果站点列表
-    //code
     
-
     //暂时先各定义一个数据
     self.cityArray = [NSMutableArray arrayWithArray:@[@"淮北"]];
     self.ariArray = [NSMutableArray arrayWithArray:@[@"墨迹天气云区"]];
     
+    //存储城市和空气果列表信息
+    [Config setCityList:self.cityArray];
+    [Config setAriList:self.ariArray];
+    
     
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    //将状态栏字体改为默认 (黑)
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    NSLog(@"leftView interface will appear");
+    
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
+{
+
+    [self.tableView reloadData];
+}
+- (IBAction)tapLeftButton:(id)sender {
+    
+    
+}
+
+- (IBAction)tapRightButton:(id)sender
+{
+
+    SearchCityVC *searchVC = [[SearchCityVC alloc] init];
+    [self presentViewController:searchVC animated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 #pragma mark - Table view data source
 
@@ -105,57 +135,8 @@
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    //将状态栏字体改为默认 (黑)
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
-    NSLog(@"leftView interface will appear");
-}
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -167,6 +148,7 @@
     [super viewWillDisappear:animated];
     //表格重载
     [self.tableView reloadData];
+//    [self removeObserver:self forKeyPath:@"cityArray"];
     NSLog(@"leftView interface  wil disappear");
     
     
