@@ -158,10 +158,9 @@
                   [self setHeadViewData];
                   
               } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-                  NSLog(@"连接服务器出错");
+                  NSLog(@"%@",error);
               }];
 }
-
 
 
 //- (void)viewDidLayoutSubviews

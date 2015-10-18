@@ -50,7 +50,7 @@
     backView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Search_backView.jpg"]];
     
     //创建模态视图返回按钮
-    UIButton *back = [[UIButton alloc] initWithFrame:CGRectMake(10, 30, 20, 20)];
+    UIButton *back = [[UIButton alloc] initWithFrame:CGRectMake(10, 30, 30, 30)];
     [back setImage:[UIImage imageNamed:@"back.png"] forState:UIControlStateNormal];
     [back addTarget:self action:@selector(tapBackButton) forControlEvents:UIControlEventTouchUpInside];
     
