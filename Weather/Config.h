@@ -22,10 +22,13 @@
 +(NSArray *)getCurrentLifeInfo:(NSDictionary *)information;
 
 //存储左侧视图的列表
-+ (void)setCityList:(NSArray *)cityArray;
-+ (void)setAriList:(NSArray *)ariArray;
++ (void)setCityList:(NSMutableArray *)cityArray;
++ (void)setAriList:(NSMutableArray *)ariArray;
 //获取左视图的列表
-+ (NSArray *)getCityList;
-+ (NSArray *)getAriList;
++ (NSMutableArray *)getCityList;
++ (NSMutableArray *)getAriList;
+//设置当前城市名
++ (void)setCurrentCityName:(NSString *)CurrentCityName;
++ (NSString *)getCurrentCityName;
 
 @end

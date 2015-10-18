@@ -20,36 +20,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //取得系统存储的用户添加的城市列表和空气果站点列表
-    
-    //暂时先各定义一个数据
-    self.cityArray = [NSMutableArray arrayWithArray:@[@"淮北"]];
-    self.ariArray = [NSMutableArray arrayWithArray:@[@"墨迹天气云区"]];
-    
-    //存储城市和空气果列表信息
-    [Config setCityList:self.cityArray];
-    [Config setAriList:self.ariArray];
-    
-    
+   
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    //将状态栏字体改为默认 (黑)
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
-    NSLog(@"leftView interface will appear");
-    
-}
+
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
 {
 
     [self.tableView reloadData];
-}
-- (IBAction)tapLeftButton:(id)sender {
-    
-    
 }
 
 - (IBAction)tapRightButton:(id)sender
@@ -133,22 +112,127 @@
         return cell;
     }
 }
+//删除时的提示信息
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"删除";
+}
 
+// UITableViewDataSource协议中定义的方法。该方法的返回值决定某行是否可编辑
+- (BOOL) tableView:(UITableView *)tableView
+canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
+    return YES;
+}
+
+// UITableViewDelegate协议中定义的方法。该方法的返回值决定单元格的编辑状态
+- (UITableViewCellEditingStyle) tableView:(UITableView *)tableView
+            editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return  UITableViewCellEditingStyleDelete;
+}
+
+// UITableViewDataSource协议中定义的方法。移动完成时激发该方法
+- (void) tableView:(UITableView *)tableView moveRowAtIndexPath:
+(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)
+destinationIndexPath
+{
+    NSInteger sourceRowNo = [sourceIndexPath row];
+    NSInteger destRowNo = [destinationIndexPath row];
+    // 获取将要移动的数据
+    id targetObj = self.cityArray[sourceRowNo];
+    // 从底层数组中删除指定的数据项
+    [self.cityArray removeObjectAtIndex: sourceRowNo];
+    // 将移动的数据项插入到指定位置
+    [self.cityArray insertObject:targetObj atIndex:destRowNo];
+}
+
+// UITableViewDataSource协议中定义的方法
+// 编辑（包括删除或插入）完成时激发该方法
+- (void) tableView:(UITableView *)tableView commitEditingStyle:
+(UITableViewCellEditingStyle)editingStyle
+	forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 如果正在提交删除操作
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSInteger rowNo = [indexPath row];
+        
+        //如果删除的是currentCity
+        if ([self.cityArray[rowNo] isEqualToString:[Config getCurrentCityName]]) {
+            [Config setCurrentCityName:self.cityArray[0]];
+        }
+        
+        // 从底层NSArray集合中删除指定的数据项
+        [self.cityArray removeObjectAtIndex:rowNo];
+        
+      
+        // 从UITableView的界面上删除指定的表格行
+        [tableView deleteRowsAtIndexPaths:@[indexPath]
+                         withRowAnimation:UITableViewRowAnimationAutomatic];
+        //全部删除时,跳转到添加界面
+        if (self.cityArray.count == 0) {
+            SearchCityVC *searchVC = [[SearchCityVC alloc] init];
+            [self presentViewController:searchVC animated:YES completion:nil];
+        }
+    }
+}
+- (IBAction)tapEdit:(id)sender {
+    //改变按钮文字
+    if ([[sender title] isEqualToString:@"编辑"]) {
+        self.navigationItem.leftBarButtonItem.title = @"完成";
+    }
+    else
+    {
+        self.navigationItem.leftBarButtonItem.title = @"编辑";
+    }
+    // 使用动画切换表格的编辑状态
+    [self.tableView setEditing: !self.tableView.editing animated:YES];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    //取得系统存储的用户添加的城市列表和空气果站点列表
+    self.cityArray = [[Config getCityList] mutableCopy];
+    self.ariArray = [NSMutableArray arrayWithArray:@[@"墨迹天气云区"]];
+    
+    if (self.cityArray.count == 0) {
+        SearchCityVC *searchVC = [[SearchCityVC alloc] init];
+        [self presentViewController:searchVC animated:YES completion:nil];
+    }
+
+    [self.tableView reloadData];
+    //将状态栏字体改为默认 (黑)
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    NSLog(@"leftView interface will appear");
+    
+}
 
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
     NSLog(@"leftView interface did appear");
     
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    //表格重载
-    [self.tableView reloadData];
-//    [self removeObserver:self forKeyPath:@"cityArray"];
+    
+    //保存编辑后的表格数据,存储到系统cityList
+    [Config setCityList:self.cityArray];
+    [Config setAriList:self.ariArray];
+    
+    //正在编辑时,title为完成,此时切换界面,执行此方法 使界面不可编辑
+    if (![self.navigationItem.leftBarButtonItem.title isEqualToString:@"编辑"]) {
+        
+        [self.tableView setEditing: !self.tableView.editing animated:NO];
+        self.navigationItem.leftBarButtonItem.title = @"编辑";
+    }
+    
     NSLog(@"leftView interface  wil disappear");
     
     

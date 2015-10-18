@@ -7,6 +7,8 @@
 //
 
 #import "RootController.h"
+#import "Config.h"
+#import "SearchCityVC.h"
 
 @interface RootController ()
 
@@ -17,13 +19,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+ 
     self.centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarViewController"];
     self.leftDrawerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LeftNavVC"];
     
     //注意使用方法和RESideMenu的区分------------------
     [self setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll]; //必须
     [self setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll]; // 必须
-    self.maximumLeftDrawerWidth = 250; 
+    self.maximumLeftDrawerWidth = 250;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
 }
 
 - (void)didReceiveMemoryWarning {

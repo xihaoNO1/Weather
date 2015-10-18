@@ -19,7 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.manager = [AFHTTPRequestOperationManager manager];//    [self initDrawer];
+    self.manager = [AFHTTPRequestOperationManager manager];
     return YES;
 }
 

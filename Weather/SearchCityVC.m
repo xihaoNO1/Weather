@@ -7,6 +7,8 @@
 //
 
 #import "SearchCityVC.h"
+#import "TabBarController.h"
+#import "Config.h"
 
 @implementation SearchCityVC
 {
@@ -30,6 +32,7 @@
     //加载城市信息
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"City" withExtension:@"plist"];
     _tableData = [NSArray arrayWithContentsOfURL:url];
+    
     
     //创建表视图
     self.tableView = [[UITableView alloc] initWithFrame:
@@ -129,6 +132,43 @@
     }
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //获取行
+    NSInteger rowNO = indexPath.row;
+    //定义城市名
+    NSString *currentName = [NSString new];
+    //获取选中的行的城市名
+    if (_isSearch) {
+        currentName = _searchData[rowNO];
+    }
+    else
+    {
+        currentName = _tableData[rowNO];
+    }
+    //获取系统存储的城市列表,添加新城市,并存储到系统中
+    NSMutableArray *cityArray = [[Config getCityList] mutableCopy];
+    if (!cityArray) {
+        NSMutableArray *cityFir = [[NSMutableArray alloc] initWithArray:@[currentName]];
+        [Config setCityList:cityFir];
+    }
+    else
+    {
+    [cityArray addObject:currentName];
+    [Config setCityList:cityArray];
+    }
+    
+    //将当前选中城市设置为当前城市
+    [Config setCurrentCityName:currentName];
+    
+    //跳转到weather界面
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+#pragma mark- searchBarDelegate
+
 // UISearchBarDelegate定义的方法，用户单击取消按钮时激发该方法
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
@@ -145,7 +185,6 @@
     [self filterBySubstring:searchText];
 }
 
-#pragma mark- searchBarDelegate
 // UISearchBarDelegate定义的方法，用户单击虚拟键盘上的Search按键时激发该方法
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {

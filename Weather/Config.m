@@ -49,33 +49,48 @@
     return lifeInfo;
 }
 
-//获取左侧视图的数据
-+ (void)setCityList:(NSArray *)cityArray
+//存储和获取左侧视图的数据
++ (void)setCityList:(NSMutableArray *)cityArray
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:cityArray forKey:@"cityArray"];
 }
 
-+ (void)setAriList:(NSArray *)ariArray
++ (void)setAriList:(NSMutableArray *)ariArray
 {
     NSUserDefaults *userdefaults = [NSUserDefaults standardUserDefaults];
     [userdefaults setObject:ariArray forKey:@"ariArray"];
 }
 
-+ (NSArray *)getCityList
++ (NSMutableArray *)getCityList
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSArray *cityArray = [userDefaults objectForKey:@"cityArray"];
+    NSMutableArray *cityArray = [userDefaults objectForKey:@"cityArray"];
     return cityArray;
 }
 
-+ (NSArray *)getAriList
++ (NSMutableArray *)getAriList
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSArray *ariArray = [userDefaults objectForKey:@"ariArray"];
+    NSMutableArray *ariArray = [userDefaults objectForKey:@"ariArray"];
     return ariArray;
 }
 
+//设置当前城市名
++ (void)setCurrentCityName:(NSString *)CurrentCityName
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:CurrentCityName forKey:@"currentCityName"];
+    
+}
+
+//获取当前城市名
++ (NSString *)getCurrentCityName
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *currentCityName = [userDefaults objectForKey:@"currentCityName"];
+    return currentCityName;
+}
 
 
 @end

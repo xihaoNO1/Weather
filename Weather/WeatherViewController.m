@@ -7,11 +7,13 @@
 //
 #import <SDImageCache.h>
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <MJRefresh.h>
 #import "AppDelegate.h"
 #import "WeatherViewController.h"
 #import "Config.h"
 #import "weatherCell.h"
 #import "zhishuCell.h"
+#import "SearchCityVC.h"
 
 
 //宏定义宽和高
@@ -44,12 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _app = [UIApplication sharedApplication].delegate;
-    
-//    //获取系统存储的城市列表
-//    NSArray *cityArray = 
-    self.currentCity = @"淮北";
-    //初始化天气信息
-    [self freshWeatherData];
+
     //设置导航栏的背景图片为透明
     UIImage *image = [UIImage imageNamed:@"navi_bg.png"];
     [self.navigationController.navigationBar setBackgroundImage:image
@@ -72,9 +69,25 @@
     //将状态栏字体改为白色
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    [self.tableView reloadData];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"weather interface will appear");
+    //获取系统中当前城市名
+    self.currentCity = [Config getCurrentCityName];
+    if (!self.currentCity) {
+        SearchCityVC *searchCity = [[SearchCityVC alloc] init];
+        [self presentViewController:searchCity animated:YES completion:nil];
+    }
+    else
+    {
+    //初始化天气信息
+    [self freshWeatherData];
+    [self.tableView reloadData];
+    }
+}
 
 - (void)setHeadViewData
 {
@@ -97,14 +110,8 @@
     
     UILabel *label_2 = (UILabel *)[self.headSubView_1 viewWithTag:2];
     [label_2 setText:[currentInfo valueForKey:@"weather"]];
-//
-//    // 获取白天天气图标
-//    NSString *dayPic = [currentInfo valueForKey:@"dayPictureUrl"];
-//    //获取URL
-//    NSURL *dayPicURL = [NSURL URLWithString:dayPic];
     //使用SDWebImage缓存
     UIImageView *imageIV = (UIImageView *)[self.headSubView_1 viewWithTag:3];
-//    [imageIV sd_setImageWithURL:dayPicURL placeholderImage:nil options:SDWebImageCacheMemoryOnly];
     
     //---------网络图太难看 只是用本地图
     imageIV.image = [UIImage imageNamed:@"weather-clear.png"];
@@ -282,11 +289,7 @@
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    NSLog(@"weather interface will appear");
-}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];

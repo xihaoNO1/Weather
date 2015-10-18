@@ -332,7 +332,7 @@
                     <navigationItem key="navigationItem" id="fSg-PF-JBf">
                         <barButtonItem key="leftBarButtonItem" title="编辑" id="f2g-dE-w7L">
                             <connections>
-                                <action selector="tapLeftButton:" destination="xcj-er-rrW" id="JPI-Lh-yZF"/>
+                                <action selector="tapEdit:" destination="xcj-er-rrW" id="nKu-Dx-cQI"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+" id="xOR-xY-7yd">

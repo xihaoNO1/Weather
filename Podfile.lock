@@ -25,6 +25,7 @@ PODS:
   - Mantle (2.0.5):
     - Mantle/extobjc (= 2.0.5)
   - Mantle/extobjc (2.0.5)
+  - MJRefresh (2.4.12)
   - MMDrawerController (0.5.7):
     - MMDrawerController/Core (= 0.5.7)
     - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
@@ -54,6 +55,7 @@ DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - LBBlurredImage
   - Mantle
+  - MJRefresh
   - MMDrawerController (~> 0.5.7)
   - ReactiveCocoa
   - SDWebImage (~> 3.7)
@@ -64,6 +66,7 @@ SPEC CHECKSUMS:
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   LBBlurredImage: 700634c17922bc2d22343118e7deb6a3ca12db43
   Mantle: 1912395033f601de5adc8ee91e48f46e4c7051ad
+  MJRefresh: ca8e9589895977df32d379d46e6b8a5450b3ff44
   MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
