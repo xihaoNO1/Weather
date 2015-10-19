@@ -72,7 +72,11 @@
         [self.portraitIV setBounds:CGRectMake(0, 0, 100 - 4 * offset.y / 6.4  - 40, 100 - 4 * offset.y / 6.4  - 40)];
         self.portraitIV.layer.cornerRadius = self.portraitIV.frame.size.width / 2;
     }
-    
+//    
+//    if (offset.y== 40) {
+//        statements
+//    }
+//    
 }
 
 

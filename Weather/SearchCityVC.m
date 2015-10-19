@@ -9,6 +9,7 @@
 #import "SearchCityVC.h"
 #import "TabBarController.h"
 #import "Config.h"
+#import "SearchAriVC.h"
 
 @implementation SearchCityVC
 {
@@ -66,7 +67,13 @@
     //创建底部ariView视图
     self.ariView = [[UIView alloc] initWithFrame:
                     CGRectMake(0, SCREEN_HEIGHT - 49, SCREEN_WIDTH, 49)];
-    self.ariView.backgroundColor = [UIColor redColor];
+    UIImageView *iv = [[UIImageView alloc] initWithFrame:self.ariView.bounds];
+    iv.image = [UIImage imageNamed:@"ariView_bg.png"];
+    [self.ariView addSubview:iv];
+    
+    //为底部ariView创建手势
+    UITapGestureRecognizer *tapAriView = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAriViewCallback:)];
+    [self.ariView addGestureRecognizer:tapAriView];
     
     
     [backView addSubview:_searchBar];
@@ -78,6 +85,7 @@
     
 }
 
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -86,6 +94,14 @@
 - (void)tapBackButton
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)tapAriViewCallback:(UITapGestureRecognizer *)gesture
+{
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"SearchAri" bundle:nil];
+    SearchAriVC *searchAri = [storyBoard instantiateViewControllerWithIdentifier:@"SearchAri"];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+    [self presentViewController:searchAri animated:YES completion:nil];
 }
 
 #pragma mark -table
@@ -166,6 +182,19 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+//添加索引
+- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    NSArray *array = @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",
+                       @"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z"];
+    return array;
+}
+
+//点击索引的事件,跳转到指定分区
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+{
+    return 0;
+}
 
 #pragma mark- searchBarDelegate
 
@@ -205,5 +234,6 @@
     // 让表格控件重新加载数据
     [self.tableView reloadData];
 }
+
 
 @end

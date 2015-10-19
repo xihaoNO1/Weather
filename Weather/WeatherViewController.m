@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 #import "WeatherViewController.h"
 #import "Config.h"
-#import "weatherCell.h"
+#import "weatherCellView.h"
 #import "zhishuCell.h"
 #import "SearchCityVC.h"
 
@@ -32,6 +32,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *cartoonGirl;
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 @property (nonatomic, assign) CGFloat screenHeight;
+@property (strong, nonatomic) IBOutlet UIView *titleView;
 
 //定义当前显示的城市
 @property (nonatomic, strong)NSString *currentCity;
@@ -40,13 +41,15 @@
 @implementation WeatherViewController
 {
     AppDelegate *_app;
+    //titleLabel
+    UILabel *_titleLabel;
     
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     _app = [UIApplication sharedApplication].delegate;
-
+    
     //设置导航栏的背景图片为透明
     UIImage *image = [UIImage imageNamed:@"navi_bg.png"];
     [self.navigationController.navigationBar setBackgroundImage:image
@@ -69,6 +72,37 @@
     //将状态栏字体改为白色
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    //设置titleLabel和titleView
+    CGFloat titleWidth = self.titleView.frame.size.width;
+    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(titleWidth / 2 - 30, 0, 60, 30)];
+    _titleLabel.textAlignment = NSTextAlignmentCenter;
+    _titleLabel.textColor = [UIColor whiteColor];
+    _titleLabel.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor clearColor];
+    [self.titleView addSubview:_titleLabel];
+
+    //初始化表视图的刷新方法为
+    //使用动画刷新
+    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    //为各个状态设置动画组
+    UIImage *refresh1 = [UIImage imageNamed:@"refresh_1.png"];
+    UIImage *refresh2 = [UIImage imageNamed:@"refresh_2.png"];
+    UIImage *refresh3 = [UIImage imageNamed:@"refresh_3.png"];
+    // 设置普通状态的动画图片
+    [header setImages:@[refresh1] forState:MJRefreshStateIdle];
+    // 设置即将刷新状态的动画图片（一松开就会刷新的状态）
+    [header setImages:@[refresh1,refresh2,refresh3] forState:MJRefreshStatePulling];
+    // 设置正在刷新状态的动画图片
+    [header setImages:@[refresh1,refresh2,refresh3] forState:MJRefreshStateRefreshing];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    [header setTitle:@"" forState:MJRefreshStateIdle];
+    [header setTitle:@"松开刷新" forState:MJRefreshStatePulling];
+    [header setTitle:@"加载中...." forState:MJRefreshStateRefreshing];
+    header.stateLabel.textColor = [UIColor whiteColor];
+
+    // 设置header
+    self.tableView.header = header;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -83,9 +117,10 @@
     }
     else
     {
-    //初始化天气信息
-    [self freshWeatherData];
-    [self.tableView reloadData];
+        
+        _titleLabel.text = self.currentCity;
+        //刷新数据,此代码跳转到 loadNewData方法
+        [self.tableView.header beginRefreshing];
     }
 }
 
@@ -145,6 +180,16 @@
     self.pm25Bn.alpha = 0.8;
 }
 
+- (void)loadNewData
+{
+    [self freshWeatherData];
+    [self.tableView reloadData];
+    
+    //展示动画 当前线程沉睡2秒
+    [NSThread sleepForTimeInterval:2];
+    
+    [self.tableView.header endRefreshing];
+}
 //刷新天气信息
 - (void)freshWeatherData
 {
@@ -170,24 +215,6 @@
 }
 
 
-//- (void)viewDidLayoutSubviews
-//{
-//    //设置表视图headView
-//    self.headView.frame = CGRectMake(0, 0,SCREEN_WIDTH , SCREEN_HEIGHT);
-//    [self.headView viewWithTag:1].frame = CGRectMake(10, SCREEN_HEIGHT - 60 -80 - 49, 15, 15);
-//    [self.headView viewWithTag:2].frame = CGRectMake(10, SCREEN_HEIGHT - 60  - 49, SCREEN_WIDTH / 3, 80);
-//    
-//    self.headSubView_1.layer.borderColor = [UIColor whiteColor].CGColor;
-//    self.headSubView_1.layer.borderWidth = 0.5;
-//    self.headSubView_1.frame = CGRectMake(0, SCREEN_HEIGHT - 49 -60, SCREEN_WIDTH / 2, 60) ;
-//    [self.headSubView_1 viewWithTag:1].frame = CGRectMake(20, 20, SCREEN_WIDTH/3, 40);
-//    
-//    self.headSubview_2.layer.borderColor = [UIColor whiteColor].CGColor;
-//    self.headSubview_2.layer.borderWidth = 0.5;
-//    self.headSubview_2.frame = CGRectMake(SCREEN_WIDTH / 2, SCREEN_HEIGHT - 60 - 49, SCREEN_WIDTH / 2, 60);
-//    [self.headSubview_2 viewWithTag:1].frame = CGRectMake(20, 20, SCREEN_WIDTH / 3, 40);
-//}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -200,6 +227,22 @@
     if (offset.y > -64.0) {
         CGFloat alpha = 1 - offset.y / 100  - 0.64 ;
         [self.cartoonGirl setAlpha:alpha];
+    }
+    
+    if (offset.y >= 120) {
+
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navi_bg_2.png"]
+                                                      forBarMetrics:UIBarMetricsDefault];
+
+    }
+    else
+    {
+        //设置导航栏的背景图片为透明
+        UIImage *image = [UIImage imageNamed:@"navi_bg.png"];
+        [self.navigationController.navigationBar setBackgroundImage:image
+                                                      forBarMetrics:UIBarMetricsDefault];
+        [self.navigationController.navigationBar setShadowImage:image];
+
     }
 }
 
@@ -219,38 +262,43 @@
     }
 }
 
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 30;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 30;
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     if (section == 0) {
-        UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 22)];
+        UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
         view1.backgroundColor = [UIColor blackColor];
         view1.alpha = 0.5;
-        UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 3, SCREEN_WIDTH, 22)];
+        UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 3, SCREEN_WIDTH, 30)];
         label1.text = @" 预报";
         label1.backgroundColor = [UIColor clearColor];
         label1.textAlignment = NSTextAlignmentLeft;
         label1.font = [UIFont systemFontOfSize:15];
         label1.textColor = [UIColor whiteColor];
         [view1 addSubview:label1];
-
-        
         return view1;
     }
     else
     {
-        UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 22)];
+        UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
         view2.backgroundColor = [UIColor blackColor];
         view2.alpha = 0.5;
-        UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 3, SCREEN_WIDTH, 22)];
+        UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 3, SCREEN_WIDTH, 30)];
         label2.text = @" 指数";
         label2.backgroundColor = [UIColor clearColor];
         label2.textAlignment = NSTextAlignmentLeft;
         label2.font = [UIFont systemFontOfSize:15];
         label2.textColor = [UIColor whiteColor];
         [view2 addSubview:label2];
-
-
-        
         return view2;
     }
 }
@@ -258,12 +306,12 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSUInteger section = indexPath.section;
-    if (section == 0) {
-        return SCREEN_HEIGHT / 3 *2;
+    if (section == 0 ) {
+        return SCREEN_HEIGHT / 3 * 2;
     }
     else
     {
-        return SCREEN_HEIGHT / 4 * 3;
+        return SCREEN_HEIGHT / 2;
     }
 }
 
@@ -273,9 +321,8 @@
     NSUInteger sectionNO = indexPath.section;
   
     if (sectionNO == 0) {
-        UITableViewCell *cell = [UITableViewCell new];
-        NSArray *nib = [[NSBundle mainBundle]loadNibNamed:@"weatherCell" owner:self options:nil];
-        cell = nib[0];
+        weatherCellView *weatherCell = [[weatherCellView alloc] init];
+        UITableViewCell *cell = [weatherCell getCell];
         cell.backgroundColor = [UIColor clearColor];
         return cell;
     }
