@@ -89,13 +89,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"location"
                                                             forIndexPath:indexPath];
 
-    AppDelegate *_app = [UIApplication sharedApplication].delegate;
     if (section == 0) {
         
         //获取行号
         NSInteger rowNO = indexPath.row;
         //获取天气信息
-        NSDictionary *information =  _app.information;
+        NSDictionary *information = [Config getCityData:self.cityArray[rowNO]];
         NSDictionary *currentInfo = [Config getCurrentInfo:information];
         NSString *tempe = [[currentInfo valueForKey:@"date"] substringWithRange:NSMakeRange(14, 2)];
         //设置天气信息
@@ -169,7 +168,9 @@ destinationIndexPath
             [Config setCurrentCityName:self.cityArray[0]];
         }
         
-        // 从底层NSArray集合中删除指定的数据项
+        // 从底层NSArray集合中删除指定的数据项       
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults removeObjectForKey:self.cityArray[rowNo]];
         [self.cityArray removeObjectAtIndex:rowNo];
         
       

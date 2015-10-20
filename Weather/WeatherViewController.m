@@ -211,6 +211,7 @@
                  
                   //必须再次执行此代码 (为什么)
                   [self setHeadViewData];
+                  [Config setCityData:info forCityNamw:self.currentCity];
                   
               } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
                   NSLog(@"%@",error);

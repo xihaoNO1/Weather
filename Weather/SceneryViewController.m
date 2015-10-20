@@ -10,6 +10,7 @@
 #import <SDImageCache.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <MJRefresh.h>
 
 @interface SceneryViewController ()
 
@@ -115,16 +116,47 @@
    }];
      */
     
+    //为collectionView添加上拉刷新和下拉刷新
+    //下拉
+    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self
+                                                               refreshingAction:@selector(loadNewData)];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    [header setTitle:@"赶紧放手,要刷新了!" forState:MJRefreshStatePulling];
+    [header setTitle:@"使出吃奶的劲,刷新中......" forState:MJRefreshStateRefreshing];
+    // 设置header
+    self.collectionView.header = header;
+    //上拉
+    self.collectionView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self
+                                                                 refreshingAction:@selector(loadMoreData)];
     
+    // 马上进入刷新状态
+    [self.collectionView.header beginRefreshing];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    
+}
 
-    
+//下拉刷新数据请求,应用AFNetworking
+- (void)loadNewData
+{
+    NSLog(@"没有最新数据");
+    [NSThread sleepForTimeInterval:2];
+    [self.collectionView.header endRefreshing];
+}
+
+//
+- (void)loadMoreData
+{
+    //用现有网址数据模拟
+    //初始化_imageArray,并plist文件中赋值
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"Scenery" withExtension:@"plist"];
+    NSArray *imageArray2 = [NSMutableArray arrayWithContentsOfURL:url];
+    [_imageArray addObjectsFromArray:imageArray2];
+    [self.collectionView reloadData];
+    [self.collectionView.footer endRefreshing];
+
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -165,7 +197,7 @@
     [iv sd_setImageWithURL:URL placeholderImage:nil options:SDWebImageCacheMemoryOnly];
     iv.contentMode = UIViewContentModeScaleAspectFill;
     
-    UILabel *lab = (UILabel *)[cell viewWithTag:2];
+    UILabel *lab = (UILabel *)[cell viewWithTag:3];
     lab.backgroundColor = [UIColor redColor];
     lab.text = [_imageArray[indexPath.row] valueForKey:@"Title"];
     return cell;

@@ -62,6 +62,22 @@
     [userdefaults setObject:ariArray forKey:@"ariArray"];
 }
 
++ (void)setCityData:(NSDictionary *)cityData forCityNamw:(NSString *)cityName
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:cityData forKey:cityName];
+    
+
+}
+
++ (NSDictionary *)getCityData:(NSString *)cityName
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *cityData = [[userDefaults objectForKey:cityName] mutableCopy];
+    return cityData;
+}
+
+
 + (NSMutableArray *)getCityList
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -75,6 +91,8 @@
     NSMutableArray *ariArray = [userDefaults objectForKey:@"ariArray"];
     return ariArray;
 }
+
+
 
 //设置当前城市名
 + (void)setCurrentCityName:(NSString *)CurrentCityName
