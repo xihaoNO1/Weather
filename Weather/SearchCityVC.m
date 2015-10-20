@@ -5,11 +5,13 @@
 //  Created by xixixi on 15/10/17.
 //  Copyright © 2015年 xihao. All rights reserved.
 //
-
+#import <UIViewController+MMDrawerController.h>
 #import "SearchCityVC.h"
 #import "TabBarController.h"
 #import "Config.h"
 #import "SearchAriVC.h"
+#import "CCLocation/CCLocationManager.h"
+
 
 @implementation SearchCityVC
 {
@@ -137,15 +139,14 @@
     }
     // 获取当前正在处理的表格行的行号
     NSInteger rowNo = indexPath.row;
-    // 如果处于搜索状态
-    if(_isSearch) {
-        // 使用_searchData作为表格显示的数据
-        cell.textLabel.text = _searchData[rowNo];
-    }
-    else {
-        // 否则使用原始的_tableData作为表格显示的数据
+    if (rowNo == 0 && !_isSearch) {
         cell.textLabel.text = _tableData[rowNo];
+        
+//        cell.imageView.image = [UIImage imageNamed:@"location_icon.png"];
+        
+        return cell;
     }
+    cell.textLabel.text = _isSearch ? _searchData[rowNo] : _tableData[rowNo];
     return cell;
 }
 
@@ -154,32 +155,67 @@
     //获取行
     NSInteger rowNO = indexPath.row;
     //定义城市名
-    NSString *currentName = [NSString new];
-    //获取选中的行的城市名
-    if (_isSearch) {
-        currentName = _searchData[rowNO];
+    __block NSString *currentName = [NSString new];
+    
+    
+    if (rowNO == 0) {
+        
+        [[CCLocationManager shareLocation]getCity:^(NSString *cityString) {
+            currentName = [cityString substringToIndex:cityString.length - 1];
+            
+            NSLog(@"%@",currentName);
+            
+            //获取系统存储的城市列表,添加新城市,并存储到系统中
+            NSMutableArray *cityArray = [[Config getCityList] mutableCopy];
+            if (!cityArray) {
+                NSMutableArray *cityFir = [[NSMutableArray alloc] initWithArray:@[currentName]];
+                [Config setCityList:cityFir];
+            }
+            else
+            {
+                [cityArray addObject:currentName];
+                [Config setCityList:cityArray];
+            }
+            //将当前选中城市设置为当前城市
+            [Config setCurrentCityName:currentName];
+            
+            //跳转到weather界面
+            [self dismissViewControllerAnimated:YES completion:nil];
+
+        }];
+
     }
     else
     {
+        
+      //获取选中的行的城市名
+      if (_isSearch) {
+        currentName = _searchData[rowNO];
+      }
+      else
+      {
         currentName = _tableData[rowNO];
-    }
-    //获取系统存储的城市列表,添加新城市,并存储到系统中
-    NSMutableArray *cityArray = [[Config getCityList] mutableCopy];
-    if (!cityArray) {
+      }
+     //获取系统存储的城市列表,添加新城市,并存储到系统中
+      NSMutableArray *cityArray = [[Config getCityList] mutableCopy];
+     if (!cityArray) {
         NSMutableArray *cityFir = [[NSMutableArray alloc] initWithArray:@[currentName]];
         [Config setCityList:cityFir];
-    }
-    else
-    {
-    [cityArray addObject:currentName];
-    [Config setCityList:cityArray];
+     }
+     else
+     {
+       [cityArray addObject:currentName];
+       [Config setCityList:cityArray];
+     }
+        //将当前选中城市设置为当前城市
+        [Config setCurrentCityName:currentName];
+        
+        //跳转到weather界面
+        [self dismissViewControllerAnimated:YES completion:nil];
+
     }
     
-    //将当前选中城市设置为当前城市
-    [Config setCurrentCityName:currentName];
     
-    //跳转到weather界面
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 //添加索引

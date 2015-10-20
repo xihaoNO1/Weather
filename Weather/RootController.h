@@ -7,7 +7,10 @@
 //
 
 #import "MMDrawerController.h"
+#import "TabBarController.h"
 
 @interface RootController : MMDrawerController
+
+@property(nonatomic, strong)TabBarController *tabBarVC;
 
 @end

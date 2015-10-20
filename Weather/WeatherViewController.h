@@ -11,4 +11,6 @@
 
 @interface WeatherViewController : BaseTableViewController <UICollectionViewDelegate, UICollectionViewDelegate,UIScrollViewDelegate>
 
+- (void)loadNewData;
+
 @end

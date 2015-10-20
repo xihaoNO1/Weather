@@ -35,6 +35,9 @@
 		EA7A7C681BCB692100CB9917 /* Snip20151012_3.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A7C651BCB692100CB9917 /* Snip20151012_3.png */; };
 		EA7A7C691BCB692100CB9917 /* Snip20151012_4.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A7C661BCB692100CB9917 /* Snip20151012_4.png */; };
 		EA7A7C6A1BCB692100CB9917 /* Snip20151012_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7A7C671BCB692100CB9917 /* Snip20151012_2.png */; };
+		EA8A6B0E1BD62315001FEBF1 /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8A6B0B1BD62315001FEBF1 /* CCLocationManager.m */; settings = {ASSET_TAGS = (); }; };
+		EA8A6B0F1BD62315001FEBF1 /* CLLocation+YCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8A6B0D1BD62315001FEBF1 /* CLLocation+YCLocation.m */; settings = {ASSET_TAGS = (); }; };
+		EA8A6B111BD62C35001FEBF1 /* location_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8A6B101BD62C35001FEBF1 /* location_icon.png */; settings = {ASSET_TAGS = (); }; };
 		EA97C3571BCD3AB000B9362F /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97C3561BCD3AB000B9362F /* LeftViewController.m */; };
 		EA97C35A1BCD61F800B9362F /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97C3591BCD61F800B9362F /* BaseTableViewController.m */; };
 		EA97C35D1BCD643C00B9362F /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97C35C1BCD643C00B9362F /* WeatherViewController.m */; };
@@ -91,7 +94,6 @@
 		EAE489D31BCEDE4100AFE65A /* cartoon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EAE489D11BCEDE4100AFE65A /* cartoon_2.png */; };
 		EAE489D41BCEDE4200AFE65A /* cartoon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EAE489D21BCEDE4100AFE65A /* cartoon_1.png */; };
 		EAEBEE981BD2236F00CBD561 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEBEE971BD2236F00CBD561 /* CoreLocation.framework */; };
-		EAEBEE9B1BD224C000CBD561 /* getLocationCity.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEBEE9A1BD224C000CBD561 /* getLocationCity.m */; settings = {ASSET_TAGS = (); }; };
 		EAEBEE9E1BD2374F00CBD561 /* SearchCityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEBEE9D1BD2374F00CBD561 /* SearchCityVC.m */; settings = {ASSET_TAGS = (); }; };
 		EAEBEEAA1BD29FA700CBD561 /* City.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAEBEEA91BD29FA700CBD561 /* City.plist */; settings = {ASSET_TAGS = (); }; };
 		EAEBEEB01BD2B1C300CBD561 /* Search_backView.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAEBEEAF1BD2B1C300CBD561 /* Search_backView.jpg */; settings = {ASSET_TAGS = (); }; };
@@ -156,6 +158,11 @@
 		EA7A7C651BCB692100CB9917 /* Snip20151012_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20151012_3.png; sourceTree = "<group>"; };
 		EA7A7C661BCB692100CB9917 /* Snip20151012_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20151012_4.png; sourceTree = "<group>"; };
 		EA7A7C671BCB692100CB9917 /* Snip20151012_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20151012_2.png; sourceTree = "<group>"; };
+		EA8A6B0A1BD62315001FEBF1 /* CCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocationManager.h; sourceTree = "<group>"; };
+		EA8A6B0B1BD62315001FEBF1 /* CCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocationManager.m; sourceTree = "<group>"; };
+		EA8A6B0C1BD62315001FEBF1 /* CLLocation+YCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+YCLocation.h"; sourceTree = "<group>"; };
+		EA8A6B0D1BD62315001FEBF1 /* CLLocation+YCLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+YCLocation.m"; sourceTree = "<group>"; };
+		EA8A6B101BD62C35001FEBF1 /* location_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_icon.png; sourceTree = "<group>"; };
 		EA97C3551BCD3AB000B9362F /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		EA97C3561BCD3AB000B9362F /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		EA97C3581BCD61F800B9362F /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
@@ -230,8 +237,6 @@
 		EAE489D11BCEDE4100AFE65A /* cartoon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cartoon_2.png; sourceTree = "<group>"; };
 		EAE489D21BCEDE4100AFE65A /* cartoon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cartoon_1.png; sourceTree = "<group>"; };
 		EAEBEE971BD2236F00CBD561 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		EAEBEE991BD224C000CBD561 /* getLocationCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getLocationCity.h; sourceTree = "<group>"; };
-		EAEBEE9A1BD224C000CBD561 /* getLocationCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getLocationCity.m; sourceTree = "<group>"; };
 		EAEBEE9C1BD2374F00CBD561 /* SearchCityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCityVC.h; sourceTree = "<group>"; };
 		EAEBEE9D1BD2374F00CBD561 /* SearchCityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCityVC.m; sourceTree = "<group>"; };
 		EAEBEEA91BD29FA700CBD561 /* City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = City.plist; sourceTree = "<group>"; };
@@ -350,6 +355,17 @@
 				EA7A7C671BCB692100CB9917 /* Snip20151012_2.png */,
 			);
 			name = scrollPic;
+			sourceTree = "<group>";
+		};
+		EA8A6B091BD62315001FEBF1 /* CCLocation */ = {
+			isa = PBXGroup;
+			children = (
+				EA8A6B0A1BD62315001FEBF1 /* CCLocationManager.h */,
+				EA8A6B0B1BD62315001FEBF1 /* CCLocationManager.m */,
+				EA8A6B0C1BD62315001FEBF1 /* CLLocation+YCLocation.h */,
+				EA8A6B0D1BD62315001FEBF1 /* CLLocation+YCLocation.m */,
+			);
+			path = CCLocation;
 			sourceTree = "<group>";
 		};
 		EA97C3501BCD3A1D00B9362F /* RootViewController */ = {
@@ -498,6 +514,7 @@
 			children = (
 				EAEE48AB1BD55A3B00DC38BC /* refresh */,
 				EA2EC6E71BCFD59B003881EC /* zhishuIcon */,
+				EA8A6B101BD62C35001FEBF1 /* location_icon.png */,
 				EA5B432D1BD4EBB6009C044B /* ariView_bg.png */,
 				EA5B43271BD4E73A009C044B /* navi_bg_2.png */,
 				EAEBEEB31BD2C11700CBD561 /* back.png */,
@@ -561,8 +578,7 @@
 			children = (
 				EAE489CC1BCE73CA00AFE65A /* Config.h */,
 				EAE489CD1BCE73CA00AFE65A /* Config.m */,
-				EAEBEE991BD224C000CBD561 /* getLocationCity.h */,
-				EAEBEE9A1BD224C000CBD561 /* getLocationCity.m */,
+				EA8A6B091BD62315001FEBF1 /* CCLocation */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -584,8 +600,8 @@
 			children = (
 				EA2EC6E41BCFC505003881EC /* zhishuCell.h */,
 				EA2EC6E51BCFC505003881EC /* zhishuCell.m */,
-				EAAE84DE1BD4CEEC00C9743A /* weatherCellView.h */,
 				EAAE84DF1BD4CEEC00C9743A /* weatherCellView.m */,
+				EAAE84DE1BD4CEEC00C9743A /* weatherCellView.h */,
 			);
 			name = cellModel;
 			sourceTree = "<group>";
@@ -732,6 +748,7 @@
 				EAD460FA1BD171FC00325448 /* leftIcon_2.png in Resources */,
 				EAC7A5231BC8FB5500936F5C /* weather-few.png in Resources */,
 				EAC7A5201BC8FB5500936F5C /* weather-clear@2x.png in Resources */,
+				EA8A6B111BD62C35001FEBF1 /* location_icon.png in Resources */,
 				EAC7A5291BC8FB5500936F5C /* weather-rain-night.png in Resources */,
 				EAC7A51D1BC8FB5500936F5C /* weather-broken.png in Resources */,
 				EAC7A5311BC8FB5500936F5C /* weather-snow.png in Resources */,
@@ -829,9 +846,9 @@
 			files = (
 				EA18964B1BCC1BEF0048A983 /* UIScrollView+ScalableCover.m in Sources */,
 				EA12F0921BD02432001BCB60 /* RootController.m in Sources */,
-				EAEBEE9B1BD224C000CBD561 /* getLocationCity.m in Sources */,
 				EAAE84E01BD4CEEC00C9743A /* weatherCellView.m in Sources */,
 				EAB7E8781BC8E1D70049F58D /* SceneryNavigationController.m in Sources */,
+				EA8A6B0E1BD62315001FEBF1 /* CCLocationManager.m in Sources */,
 				EAB7E8741BC8E1450049F58D /* WeatherNavigationController.m in Sources */,
 				EA21EDC21BC90BC00082CB25 /* TabBarController.m in Sources */,
 				EA7A7C631BCB616200CB9917 /* SceneryViewController.m in Sources */,
@@ -842,6 +859,7 @@
 				EA2EC6E61BCFC505003881EC /* zhishuCell.m in Sources */,
 				EAB7E87C1BC8E2030049F58D /* MyNavigationController.m in Sources */,
 				EA97C35D1BCD643C00B9362F /* WeatherViewController.m in Sources */,
+				EA8A6B0F1BD62315001FEBF1 /* CLLocation+YCLocation.m in Sources */,
 				EAB7E83D1BC81A1D0049F58D /* AppDelegate.m in Sources */,
 				EAE489CE1BCE73CA00AFE65A /* Config.m in Sources */,
 				EAB7E87F1BC8E60E0049F58D /* BaseViewController.m in Sources */,

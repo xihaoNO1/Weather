@@ -10,7 +10,10 @@
 #import "Config.h"
 #import "AppDelegate.h"
 #import "SearchCityVC.h"
-
+#import "TabBarController.h"
+#import "WeatherNavigationController.h"
+#import "WeatherViewController.h"
+#import <UIViewController+MMDrawerController.h>
 @interface LeftViewController ()
 
 @end
@@ -35,6 +38,9 @@
 {
 
     SearchCityVC *searchVC = [[SearchCityVC alloc] init];
+    
+    //在模态视图调用前,就关闭左视图,从模态视图返回时,能够自动刷新
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
     [self presentViewController:searchVC animated:YES completion:nil];
 }
 
@@ -177,6 +183,25 @@ destinationIndexPath
         }
     }
 }
+//点击表格事件
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //获取当前分区及行数
+    NSInteger section = indexPath.section;
+    NSInteger rowNO = indexPath.row;
+    if (section == 0) {
+        //设置当前城市名
+        [Config setCurrentCityName:[Config getCityList][rowNO]];
+        
+        //此行代码控制点击时重回center中央界面
+        [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+    }
+    else
+    {
+    
+    }
+}
+
 - (IBAction)tapEdit:(id)sender {
     //改变按钮文字
     if ([[sender title] isEqualToString:@"编辑"]) {

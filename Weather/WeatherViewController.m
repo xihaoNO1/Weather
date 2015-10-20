@@ -84,22 +84,24 @@
     //初始化表视图的刷新方法为
     //使用动画刷新
     MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    /*
     //为各个状态设置动画组
     UIImage *refresh1 = [UIImage imageNamed:@"refresh_1.png"];
     UIImage *refresh2 = [UIImage imageNamed:@"refresh_2.png"];
     UIImage *refresh3 = [UIImage imageNamed:@"refresh_3.png"];
     // 设置普通状态的动画图片
-    [header setImages:@[refresh1] forState:MJRefreshStateIdle];
+    [header setImages:@[] forState:MJRefreshStateIdle];
     // 设置即将刷新状态的动画图片（一松开就会刷新的状态）
     [header setImages:@[refresh1,refresh2,refresh3] forState:MJRefreshStatePulling];
-    // 设置正在刷新状态的动画图片
+    //设置正在刷新状态的动画图片
     [header setImages:@[refresh1,refresh2,refresh3] forState:MJRefreshStateRefreshing];
-    header.lastUpdatedTimeLabel.hidden = YES;
+    */
+     header.lastUpdatedTimeLabel.hidden = YES;
     [header setTitle:@"" forState:MJRefreshStateIdle];
     [header setTitle:@"松开刷新" forState:MJRefreshStatePulling];
-    [header setTitle:@"加载中...." forState:MJRefreshStateRefreshing];
+    [header setTitle:@"努力刷新中...." forState:MJRefreshStateRefreshing];
     header.stateLabel.textColor = [UIColor whiteColor];
-
+     
     // 设置header
     self.tableView.header = header;
 
@@ -109,7 +111,8 @@
 {
     [super viewWillAppear:animated];
     NSLog(@"weather interface will appear");
-    //获取系统中当前城市名
+    
+    //获取系统中当前城市
     self.currentCity = [Config getCurrentCityName];
     if (!self.currentCity) {
         SearchCityVC *searchCity = [[SearchCityVC alloc] init];

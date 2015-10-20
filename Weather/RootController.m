@@ -19,8 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
- 
-    self.centerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarViewController"];
+    
+    
+    //设置左视图和中间视图
+    self.tabBarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBarViewController"];
+
+    self.centerViewController = self.tabBarVC;
     self.leftDrawerViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"LeftNavVC"];
     
     //注意使用方法和RESideMenu的区分------------------
