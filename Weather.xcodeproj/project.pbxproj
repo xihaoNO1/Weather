@@ -38,6 +38,7 @@
 		EA8A6B0E1BD62315001FEBF1 /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8A6B0B1BD62315001FEBF1 /* CCLocationManager.m */; settings = {ASSET_TAGS = (); }; };
 		EA8A6B0F1BD62315001FEBF1 /* CLLocation+YCLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8A6B0D1BD62315001FEBF1 /* CLLocation+YCLocation.m */; settings = {ASSET_TAGS = (); }; };
 		EA8A6B111BD62C35001FEBF1 /* location_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8A6B101BD62C35001FEBF1 /* location_icon.png */; settings = {ASSET_TAGS = (); }; };
+		EA8A6B131BD66C0B001FEBF1 /* Scenery.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA8A6B121BD66C0B001FEBF1 /* Scenery.plist */; settings = {ASSET_TAGS = (); }; };
 		EA97C3571BCD3AB000B9362F /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97C3561BCD3AB000B9362F /* LeftViewController.m */; };
 		EA97C35A1BCD61F800B9362F /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97C3591BCD61F800B9362F /* BaseTableViewController.m */; };
 		EA97C35D1BCD643C00B9362F /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97C35C1BCD643C00B9362F /* WeatherViewController.m */; };
@@ -163,6 +164,7 @@
 		EA8A6B0C1BD62315001FEBF1 /* CLLocation+YCLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+YCLocation.h"; sourceTree = "<group>"; };
 		EA8A6B0D1BD62315001FEBF1 /* CLLocation+YCLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+YCLocation.m"; sourceTree = "<group>"; };
 		EA8A6B101BD62C35001FEBF1 /* location_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_icon.png; sourceTree = "<group>"; };
+		EA8A6B121BD66C0B001FEBF1 /* Scenery.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Scenery.plist; sourceTree = "<group>"; };
 		EA97C3551BCD3AB000B9362F /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		EA97C3561BCD3AB000B9362F /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		EA97C3581BCD61F800B9362F /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 				EAB7E8491BC81A1D0049F58D /* Info.plist */,
 				EAB7E8391BC81A1C0049F58D /* main.m */,
 				EAEBEEA91BD29FA700CBD561 /* City.plist */,
+				EA8A6B121BD66C0B001FEBF1 /* Scenery.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -724,6 +727,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8A6B131BD66C0B001FEBF1 /* Scenery.plist in Resources */,
 				EAC7A52F1BC8FB5500936F5C /* weather-shower.png in Resources */,
 				EAD460EE1BD1130400325448 /* mojiYunQu.png in Resources */,
 				EA7A7BF21BC96B0600CB9917 /* wo@2x.png in Resources */,

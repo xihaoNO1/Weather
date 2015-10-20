@@ -7,6 +7,8 @@
 //
 
 #import "SceneryViewController.h"
+#import <SDImageCache.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @interface SceneryViewController ()
@@ -19,7 +21,7 @@
 @implementation SceneryViewController
 {
     NSMutableArray *_imageArray;
-    ALAssetsLibrary *library;
+//    ALAssetsLibrary *library;
 }
 
 - (void)viewDidLoad {
@@ -80,9 +82,11 @@
     layout.minimumLineSpacing = 1.0;
     self.collectionView.collectionViewLayout = layout;
     
-    
-    _imageArray = [[NSMutableArray alloc] init];
-    
+    //初始化_imageArray,并plist文件中赋值
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"Scenery" withExtension:@"plist"];
+    _imageArray = [NSMutableArray arrayWithContentsOfURL:url];
+
+    /* 占用内存过大 会被系统kill掉
     //从手机中导入相册
     library = [[ALAssetsLibrary alloc] init];
     
@@ -109,6 +113,7 @@
        }
        } failureBlock:^(NSError *error) {
    }];
+     */
     
     
 }
@@ -152,13 +157,17 @@
 {
     //从可重用单元格队列中取出一个单元格
     UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellID" forIndexPath:indexPath];
+    
     UIImageView *iv =(UIImageView *) [cell viewWithTag:1];
-    iv.image = _imageArray[indexPath.row];
-    iv.frame = cell.bounds;
+    NSString *urlStr = [_imageArray[indexPath.row] valueForKey:@"URL"];
+    NSURL *URL = [NSURL URLWithString:urlStr];
+    //异步下载,不保存到本地中
+    [iv sd_setImageWithURL:URL placeholderImage:nil options:SDWebImageCacheMemoryOnly];
     iv.contentMode = UIViewContentModeScaleAspectFill;
-//    UILabel *lab = (UILabel *)[cell viewWithTag:2];
-//    lab.backgroundColor = [UIColor redColor];
-//    lab.text = [NSString stringWithFormat:@"美景%d",indexPath.row + 1];
+    
+    UILabel *lab = (UILabel *)[cell viewWithTag:2];
+    lab.backgroundColor = [UIColor redColor];
+    lab.text = [_imageArray[indexPath.row] valueForKey:@"Title"];
     return cell;
 }
 
