@@ -102,6 +102,14 @@
 		EAEE48B91BD5622000DC38BC /* refresh_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EAEE48B61BD5622000DC38BC /* refresh_1.png */; settings = {ASSET_TAGS = (); }; };
 		EAEE48BA1BD5622000DC38BC /* refresh_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EAEE48B71BD5622000DC38BC /* refresh_2.png */; settings = {ASSET_TAGS = (); }; };
 		EAEE48BB1BD5622000DC38BC /* refresh_3.png in Resources */ = {isa = PBXBuildFile; fileRef = EAEE48B81BD5622000DC38BC /* refresh_3.png */; settings = {ASSET_TAGS = (); }; };
+		EAF888811BD754CB00B43790 /* UUBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF888761BD754CB00B43790 /* UUBar.m */; settings = {ASSET_TAGS = (); }; };
+		EAF888821BD754CB00B43790 /* UUBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF888781BD754CB00B43790 /* UUBarChart.m */; settings = {ASSET_TAGS = (); }; };
+		EAF888831BD754CB00B43790 /* UUChart.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF8887A1BD754CB00B43790 /* UUChart.m */; settings = {ASSET_TAGS = (); }; };
+		EAF888841BD754CB00B43790 /* UUChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF8887C1BD754CB00B43790 /* UUChartLabel.m */; settings = {ASSET_TAGS = (); }; };
+		EAF888851BD754CB00B43790 /* UUColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF8887E1BD754CB00B43790 /* UUColor.m */; settings = {ASSET_TAGS = (); }; };
+		EAF888861BD754CB00B43790 /* UULineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF888801BD754CB00B43790 /* UULineChart.m */; settings = {ASSET_TAGS = (); }; };
+		EAF8888A1BD76C5600B43790 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF888891BD76C5600B43790 /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EAF8888C1BD76C6D00B43790 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAF8888B1BD76C6D00B43790 /* Login.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,6 +255,21 @@
 		EAEE48B61BD5622000DC38BC /* refresh_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_1.png; sourceTree = "<group>"; };
 		EAEE48B71BD5622000DC38BC /* refresh_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_2.png; sourceTree = "<group>"; };
 		EAEE48B81BD5622000DC38BC /* refresh_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_3.png; sourceTree = "<group>"; };
+		EAF888751BD754CB00B43790 /* UUBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUBar.h; sourceTree = "<group>"; };
+		EAF888761BD754CB00B43790 /* UUBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUBar.m; sourceTree = "<group>"; };
+		EAF888771BD754CB00B43790 /* UUBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUBarChart.h; sourceTree = "<group>"; };
+		EAF888781BD754CB00B43790 /* UUBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUBarChart.m; sourceTree = "<group>"; };
+		EAF888791BD754CB00B43790 /* UUChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUChart.h; sourceTree = "<group>"; };
+		EAF8887A1BD754CB00B43790 /* UUChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUChart.m; sourceTree = "<group>"; };
+		EAF8887B1BD754CB00B43790 /* UUChartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUChartLabel.h; sourceTree = "<group>"; };
+		EAF8887C1BD754CB00B43790 /* UUChartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUChartLabel.m; sourceTree = "<group>"; };
+		EAF8887D1BD754CB00B43790 /* UUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUColor.h; sourceTree = "<group>"; };
+		EAF8887E1BD754CB00B43790 /* UUColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUColor.m; sourceTree = "<group>"; };
+		EAF8887F1BD754CB00B43790 /* UULineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UULineChart.h; sourceTree = "<group>"; };
+		EAF888801BD754CB00B43790 /* UULineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UULineChart.m; sourceTree = "<group>"; };
+		EAF888881BD76C5600B43790 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EAF888891BD76C5600B43790 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		EAF8888B1BD76C6D00B43790 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -508,6 +531,7 @@
 				EAB7E87B1BC8E2030049F58D /* MyNavigationController.m */,
 				EA7A7BE61BC9475700CB9917 /* MyViewController.h */,
 				EA7A7BE71BC9475700CB9917 /* MyViewController.m */,
+				EAF888871BD76C1600B43790 /* Login */,
 			);
 			name = Center;
 			sourceTree = "<group>";
@@ -603,8 +627,9 @@
 			children = (
 				EA2EC6E41BCFC505003881EC /* zhishuCell.h */,
 				EA2EC6E51BCFC505003881EC /* zhishuCell.m */,
-				EAAE84DF1BD4CEEC00C9743A /* weatherCellView.m */,
 				EAAE84DE1BD4CEEC00C9743A /* weatherCellView.h */,
+				EAAE84DF1BD4CEEC00C9743A /* weatherCellView.m */,
+				EAF888741BD754CB00B43790 /* UUChart */,
 			);
 			name = cellModel;
 			sourceTree = "<group>";
@@ -617,6 +642,35 @@
 				EAEE48B81BD5622000DC38BC /* refresh_3.png */,
 			);
 			name = refresh;
+			sourceTree = "<group>";
+		};
+		EAF888741BD754CB00B43790 /* UUChart */ = {
+			isa = PBXGroup;
+			children = (
+				EAF888751BD754CB00B43790 /* UUBar.h */,
+				EAF888761BD754CB00B43790 /* UUBar.m */,
+				EAF888771BD754CB00B43790 /* UUBarChart.h */,
+				EAF888781BD754CB00B43790 /* UUBarChart.m */,
+				EAF888791BD754CB00B43790 /* UUChart.h */,
+				EAF8887A1BD754CB00B43790 /* UUChart.m */,
+				EAF8887B1BD754CB00B43790 /* UUChartLabel.h */,
+				EAF8887C1BD754CB00B43790 /* UUChartLabel.m */,
+				EAF8887D1BD754CB00B43790 /* UUColor.h */,
+				EAF8887E1BD754CB00B43790 /* UUColor.m */,
+				EAF8887F1BD754CB00B43790 /* UULineChart.h */,
+				EAF888801BD754CB00B43790 /* UULineChart.m */,
+			);
+			path = UUChart;
+			sourceTree = "<group>";
+		};
+		EAF888871BD76C1600B43790 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EAF888881BD76C5600B43790 /* LoginViewController.h */,
+				EAF888891BD76C5600B43790 /* LoginViewController.m */,
+				EAF8888B1BD76C6D00B43790 /* Login.storyboard */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -765,6 +819,7 @@
 				EA2EC6F31BCFD59B003881EC /* ziwaixian.png in Resources */,
 				EAB7E8451BC81A1D0049F58D /* Assets.xcassets in Resources */,
 				EAB7E8871BC8F3EA0049F58D /* bar_bg.png in Resources */,
+				EAF8888C1BD76C6D00B43790 /* Login.storyboard in Resources */,
 				EA97C3651BCD876600B9362F /* 4.png in Resources */,
 				EAEBEEAA1BD29FA700CBD561 /* City.plist in Resources */,
 				EA2EC6F11BCFD59B003881EC /* xiche.png in Resources */,
@@ -857,18 +912,25 @@
 				EA21EDC21BC90BC00082CB25 /* TabBarController.m in Sources */,
 				EA7A7C631BCB616200CB9917 /* SceneryViewController.m in Sources */,
 				EA7A7BE81BC9475700CB9917 /* MyViewController.m in Sources */,
+				EAF888811BD754CB00B43790 /* UUBar.m in Sources */,
 				EAD460EA1BD0E90300325448 /* LeftNaviController.m in Sources */,
 				EAB7E8701BC8E0960049F58D /* BaseNavigationController.m in Sources */,
 				EA97C35A1BCD61F800B9362F /* BaseTableViewController.m in Sources */,
+				EAF888821BD754CB00B43790 /* UUBarChart.m in Sources */,
+				EAF8888A1BD76C5600B43790 /* LoginViewController.m in Sources */,
 				EA2EC6E61BCFC505003881EC /* zhishuCell.m in Sources */,
 				EAB7E87C1BC8E2030049F58D /* MyNavigationController.m in Sources */,
+				EAF888831BD754CB00B43790 /* UUChart.m in Sources */,
 				EA97C35D1BCD643C00B9362F /* WeatherViewController.m in Sources */,
 				EA8A6B0F1BD62315001FEBF1 /* CLLocation+YCLocation.m in Sources */,
 				EAB7E83D1BC81A1D0049F58D /* AppDelegate.m in Sources */,
+				EAF888861BD754CB00B43790 /* UULineChart.m in Sources */,
 				EAE489CE1BCE73CA00AFE65A /* Config.m in Sources */,
+				EAF888841BD754CB00B43790 /* UUChartLabel.m in Sources */,
 				EAB7E87F1BC8E60E0049F58D /* BaseViewController.m in Sources */,
 				EAEBEE9E1BD2374F00CBD561 /* SearchCityVC.m in Sources */,
 				EA97C3571BCD3AB000B9362F /* LeftViewController.m in Sources */,
+				EAF888851BD754CB00B43790 /* UUColor.m in Sources */,
 				EAB7E83A1BC81A1C0049F58D /* main.m in Sources */,
 				EA5B43311BD4EDE3009C044B /* SearchAriVC.m in Sources */,
 			);

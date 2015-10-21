@@ -48,7 +48,7 @@
                                 </button>
                                 <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFW-lf-IId">
                                     <rect key="frame" x="277" y="261" width="35" height="43"/>
-                                    <state key="normal" title="Button">
+                                    <state key="normal">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                 </button>
@@ -76,14 +76,14 @@
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPF-ln-JQv">
                                     <rect key="frame" x="8" y="201" width="93" height="37"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                    <state key="normal" title="Button">
+                                    <state key="normal">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                 </button>
                                 <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6a-YH-3jq">
-                                    <rect key="frame" x="8" y="360" width="113" height="26"/>
+                                    <rect key="frame" x="8" y="357" width="113" height="32"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <state key="normal" title="Button">
+                                    <state key="normal">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                 </button>
@@ -249,11 +249,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAY-5y-BYT">
-                                <rect key="frame" x="0.0" y="64" width="320" height="80"/>
-                            </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s3m-Zt-b7Q">
-                                <rect key="frame" x="0.0" y="143" width="320" height="376"/>
+                                <rect key="frame" x="0.0" y="119" width="320" height="401"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="D1v-bg-XDS">
                                     <size key="itemSize" width="109" height="149"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -287,16 +284,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2Er-dN-ozf"/>
+                    <navigationItem key="navigationItem" id="L3M-0u-d98"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="collectionView" destination="s3m-Zt-b7Q" id="1t6-10-7cN"/>
-                        <outlet property="scrollView" destination="PAY-5y-BYT" id="CC4-so-cYW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNk-fx-Fa6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="224" y="-430.99999999999994"/>
+            <point key="canvasLocation" x="224" y="-431"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="TNE-9A-ZtB">

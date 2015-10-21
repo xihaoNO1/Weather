@@ -29,41 +29,40 @@
     [super viewDidLoad];
     //处理系统collectionView的顶部留白
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.navigationController.navigationBarHidden = YES;
-    //设置导航栏的背景图片为透明
-//    UIImage *image = [UIImage imageNamed:@"navi_bg.png"];
-//    [self.navigationController.navigationBar setBackgroundImage:image
-//                                                  forBarMetrics:UIBarMetricsDefault];
-//    [self.navigationController.navigationBar setShadowImage:image];
-
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+    
     //设置scrollView及pageControl的位置
-    self.scrollView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 144);
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 120)];
     self.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     //设置scrollview的contentsize
-    self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH * 3, 80);
+    self.scrollView.contentSize = CGSizeMake(SCREEN_WIDTH * 3, 0);//设置为0 代表禁止垂直方向滚动
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.directionalLockEnabled = YES;
+    self.scrollView.alwaysBounceHorizontal = NO;
+    self.scrollView.alwaysBounceVertical = NO;
+    [self.view addSubview:self.scrollView];
+    
     
     //设置分页控件
-    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(SCREEN_WIDTH / 2 - 75,125, 150, 20)];
-
+    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(SCREEN_WIDTH / 2 - 75,90, 150, 20)];
     self.pageControl.numberOfPages = (NSInteger) 3;
     self.pageControl.currentPage = (NSInteger) 0;
     self.pageControl.userInteractionEnabled = NO;
     self.pageControl.currentPageIndicatorTintColor = [UIColor orangeColor];
     self.pageControl.pageIndicatorTintColor = [UIColor greenColor];
     
-
-    
     [self.view addSubview:self.pageControl];
     
     //分别创建三个Imageview
-    UIImageView * page1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 80)];
+    UIImageView * page1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 120)];
     page1.image = [UIImage imageNamed:@"Snip20151012_2.png"];
     
-    UIImageView * page2 = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, 80)];
+    UIImageView * page2 = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, 120)];
     page2.image = [UIImage imageNamed:@"Snip20151012_3.png"];
     
-    UIImageView * page3 = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH * 2, 0, SCREEN_WIDTH, 80)];
+    UIImageView * page3 = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH * 2, 0, SCREEN_WIDTH, 120)];
     page3.image = [UIImage imageNamed:@"Snip20151012_4.png"];
     
     [self.scrollView addSubview:page1];

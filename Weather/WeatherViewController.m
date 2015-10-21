@@ -197,6 +197,10 @@
 - (void)freshWeatherData
 {
     
+    
+    //获取系统中当前城市
+    self.currentCity = [Config getCurrentCityName];
+    _titleLabel.text = self.currentCity;
     //用字典封装参数
     NSDictionary *pramas = @{@"location":self.currentCity,
                              @"output":@"json",
@@ -208,8 +212,8 @@
                   //将返回信息保存到系统中
                   NSDictionary *info = (NSDictionary *)responseObject;
                   _app.information = info;
-                 
-                  //必须再次执行此代码 (为什么)
+//                  NSLog(@"%@",info);
+                  //必须再此执行此代码 (为什么)
                   [self setHeadViewData];
                   [Config setCityData:info forCityNamw:self.currentCity];
                   
@@ -241,7 +245,7 @@
     }
     else
     {
-        //设置导航栏的背景图片为透明
+        //设置导航栏的背景图片
         UIImage *image = [UIImage imageNamed:@"navi_bg.png"];
         [self.navigationController.navigationBar setBackgroundImage:image
                                                       forBarMetrics:UIBarMetricsDefault];

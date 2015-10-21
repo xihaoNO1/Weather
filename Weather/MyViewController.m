@@ -8,6 +8,7 @@
 
 #import "MyViewController.h"
 #import "UIScrollView+ScalableCover.h"
+#import "LoginViewController.h"
 
 @interface MyViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *portraitIV;
@@ -43,10 +44,20 @@
     self.portraitIV.layer.cornerRadius = self.portraitIV.frame.size.width / 2;
     self.portraitIV.layer.masksToBounds = YES;
     self.portraitIV.alpha = 0.8;
+    //为头像添加手势
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                 action:@selector(tapPortraitIV:)];
+    self.portraitIV.userInteractionEnabled = YES;
+    [self.portraitIV addGestureRecognizer:tapGesture];
 
 
 }
-
+- (void)tapPortraitIV:(UITapGestureRecognizer *)gesture
+{
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    LoginViewController *loginVC = [storyBoard instantiateViewControllerWithIdentifier:@"loginVC"];
+    [self.navigationController pushViewController:loginVC animated:YES];
+}
 
 - (void)setCoverImage
 {

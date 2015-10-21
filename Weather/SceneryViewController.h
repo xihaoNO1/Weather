@@ -10,7 +10,7 @@
 
 @interface SceneryViewController : UIViewController <UIScrollViewDelegate, UICollectionViewDelegate,UICollectionViewDataSource>
 
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic)UIPageControl *pageControl;
 @end
