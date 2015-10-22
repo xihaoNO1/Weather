@@ -94,6 +94,7 @@
 		EAE489CE1BCE73CA00AFE65A /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE489CD1BCE73CA00AFE65A /* Config.m */; };
 		EAE489D31BCEDE4100AFE65A /* cartoon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EAE489D11BCEDE4100AFE65A /* cartoon_2.png */; };
 		EAE489D41BCEDE4200AFE65A /* cartoon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EAE489D21BCEDE4100AFE65A /* cartoon_1.png */; };
+		EAE96FA11BD8AD25001E80DC /* SceneryImageviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE96FA01BD8AD25001E80DC /* SceneryImageviewController.m */; settings = {ASSET_TAGS = (); }; };
 		EAEBEE981BD2236F00CBD561 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEBEE971BD2236F00CBD561 /* CoreLocation.framework */; };
 		EAEBEE9E1BD2374F00CBD561 /* SearchCityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEBEE9D1BD2374F00CBD561 /* SearchCityVC.m */; settings = {ASSET_TAGS = (); }; };
 		EAEBEEAA1BD29FA700CBD561 /* City.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAEBEEA91BD29FA700CBD561 /* City.plist */; settings = {ASSET_TAGS = (); }; };
@@ -246,6 +247,8 @@
 		EAE489CD1BCE73CA00AFE65A /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		EAE489D11BCEDE4100AFE65A /* cartoon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cartoon_2.png; sourceTree = "<group>"; };
 		EAE489D21BCEDE4100AFE65A /* cartoon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cartoon_1.png; sourceTree = "<group>"; };
+		EAE96F9F1BD8AD25001E80DC /* SceneryImageviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneryImageviewController.h; sourceTree = "<group>"; };
+		EAE96FA01BD8AD25001E80DC /* SceneryImageviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneryImageviewController.m; sourceTree = "<group>"; };
 		EAEBEE971BD2236F00CBD561 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EAEBEE9C1BD2374F00CBD561 /* SearchCityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCityVC.h; sourceTree = "<group>"; };
 		EAEBEE9D1BD2374F00CBD561 /* SearchCityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCityVC.m; sourceTree = "<group>"; };
@@ -520,6 +523,8 @@
 				EAB7E8771BC8E1D70049F58D /* SceneryNavigationController.m */,
 				EA7A7C611BCB616200CB9917 /* SceneryViewController.h */,
 				EA7A7C621BCB616200CB9917 /* SceneryViewController.m */,
+				EAE96F9F1BD8AD25001E80DC /* SceneryImageviewController.h */,
+				EAE96FA01BD8AD25001E80DC /* SceneryImageviewController.m */,
 			);
 			name = Scenery;
 			sourceTree = "<group>";
@@ -932,6 +937,7 @@
 				EA97C3571BCD3AB000B9362F /* LeftViewController.m in Sources */,
 				EAF888851BD754CB00B43790 /* UUColor.m in Sources */,
 				EAB7E83A1BC81A1C0049F58D /* main.m in Sources */,
+				EAE96FA11BD8AD25001E80DC /* SceneryImageviewController.m in Sources */,
 				EA5B43311BD4EDE3009C044B /* SearchAriVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

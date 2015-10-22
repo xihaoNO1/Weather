@@ -295,6 +295,52 @@
             </objects>
             <point key="canvasLocation" x="224" y="-431"/>
         </scene>
+        <!--Scenery Imageview Controller-->
+        <scene sceneID="lRq-13-gpO">
+            <objects>
+                <viewController id="vYu-ct-PQE" customClass="SceneryImageviewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EmR-hP-Qmj"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fm-fR-zFc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UWo-Yh-70p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OBe-rQ-V1i">
+                                <rect key="frame" x="0.0" y="20" width="320" height="353"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="twb-ay-Z8I">
+                                <rect key="frame" x="0.0" y="372" width="320" height="147"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Sb-OR-KPJ">
+                                        <rect key="frame" x="0.0" y="114" width="320" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IC0-Kx-xzE">
+                                                <rect key="frame" x="0.0" y="0.0" width="239" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QX2-6t-H1S">
+                                                <rect key="frame" x="239" y="-1" width="81" height="30"/>
+                                                <state key="normal" title="发送"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6oS-5K-I60"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VrM-1f-9Ly" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="-431"/>
+        </scene>
         <!--Left View Controller-->
         <scene sceneID="TNE-9A-ZtB">
             <objects>

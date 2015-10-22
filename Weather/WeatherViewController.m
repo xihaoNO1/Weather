@@ -137,8 +137,18 @@
     //设置headView的三个按钮----也可改成label+gesture
     [self.windBn setTitle:[currentInfo valueForKey:@"wind"] forState:UIControlStateNormal];
     [self.weatherBn setTitle:[currentInfo valueForKey:@"weather"] forState:UIControlStateNormal];
-    NSString *tempe = [[currentInfo valueForKey:@"date"] substringWithRange:NSMakeRange(14, 2)];
-    [self.temBn setTitle:[tempe stringByAppendingString:@"°"] forState:UIControlStateNormal];
+    NSString *tempe = [currentInfo valueForKey:@"date"];
+    if (tempe.length == 18) {
+        NSString *tempe1 = [tempe substringWithRange:NSMakeRange(14, 2)];
+        [self.temBn setTitle:[tempe1 stringByAppendingString:@"°"] forState:UIControlStateNormal];
+
+    }
+    else
+    {
+        NSString *tempe1 = [tempe substringWithRange:NSMakeRange(14, 1)];
+        [self.temBn setTitle:[tempe1 stringByAppendingString:@"°"] forState:UIControlStateNormal];
+    }
+    
     
     //设置headView_1
     NSString *taday = @"今天    ";
